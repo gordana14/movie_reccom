@@ -1,0 +1,92 @@
+find_user[find_user['count'] == 144].head(1)
+Out[159]: 
+        movieId  rating     timestamp  count
+userId                                      
+581     1672892   399.8  184791452010    144
+
+
+check_system( 581, 10, movies['itemUser'], movies['data'], alg)
+Out[160]: 
+   userId  movieId                     title  rating  est  error  avg_error
+0     581     2080  X-Men Origins: Wolverine     3.0  3.0    0.0  -0.318571
+
+find_user[find_user['count'] == 590].head(1)
+Out[161]: 
+Empty DataFrame
+Columns: [movieId, rating, timestamp, count]
+Index: []
+
+find_user[find_user['count'] == 9279].head(1)
+Out[162]: 
+          movieId   rating       timestamp  count
+userId                                           
+8659    212322843  30422.6  10340747199544   9279
+
+check_system( 8659, 10, movies['itemUser'], movies['data'], alg)
+Out[163]: 
+   userId  movieId         title  rating   est  error  avg_error
+0    8659    54328  Ocean Heaven     3.0  3.34   0.34   0.015603
+
+find_user[find_user['count'] == 35].head(1)
+Out[164]: 
+        movieId  rating    timestamp  count
+userId                                     
+54        88527   145.0  34517759775     35
+
+check_system( 54, 10, movies['itemUser'], movies['data'], alg)
+Out[165]: 
+Empty DataFrame
+Columns: [userId, movieId, title, rating, est, error, avg_error]
+Index: []
+
+
+find_user = movies['itemUser'].copy()
+find_user['count'] = 1
+find_user = find_user.groupby('userId').sum()
+find_user
+
+
+
+
+count    113464.000000 mean          3.660814 std           0.646581 min           1.000000 25%           3.250000 50%           3.710000 75%           4.130000 max           5.000000 Name: est, dtype: float64
+
+count    113464.000000 mean          3.665299 std           1.045688 min           1.000000 25%           3.000000 50%           4.000000 75%           4.500000 max           5.000000 Name: rating, dtype: float64 
+
+count    210.000000 mean       3.119349 std        0.556673 min        1.210641 25%        2.737037 50%        3.167170 75%        3.433464 max        4.509557
+count    210.000000 mean       3.529048 std        1.076484 min        1.000000 25%        3.000000 50%        3.500000 75%        4.000000 max        5.000000 
+
+
+1va metoda:
+https://nbviewer.jupyter.org/github/khanhnamle1994/movielens/blob/master/Content_Based_and_Collaborative_Filtering_Models.ipynb ok 
+3ca metoda :
+http://rpubs.com/Jango/486734?fbclid=IwAR0pNtRZ1GZR4TAqA1Kla-96vv11x2tFPlbZGMP0OSR2cKb54jBn3tv8G-8
+https://rpubs.com/jt_rpubs/287285#
+https://surprise.readthedocs.io/en/stable/model_selection.html
+https://towardsdatascience.com/building-and-testing-recommender-systems-with-surprise-step-by-step-d4ba702ef80b
+http://www.albertauyeung.com/post/python-matrix-factorization/
+https://pdfs.semanticscholar.org/5c7a/8f1f630428e7a471e831dde6514e91721492.pdf Mozda 
+
+
+Plotiranje:
+
+f, ax = plt.subplots()
+sns.pointplot(x="lr_rmse", y="param_lr_all",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Learning rate")
+f.savefig('statq.png', dpi=400)
+figure = svm.get_figure()    
+figure.savefig('svm_conf.png', dpi=400)
+
+#######
+import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-deep')
+plt.hist([x, y], bins, label=['x', 'y'])
+plt.legend(loc='upper right')
+plt.show()
+
+gric searc for tuning
+https://towardsdatascience.com/grid-search-for-model-tuning-3319b259367e
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html

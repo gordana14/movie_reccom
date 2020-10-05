@@ -1,0 +1,3105 @@
+                 else:
+                    new_item+=item[:-4]+'|'
+             mov_genres.append(new_item)
+             count_row.append(counts)
+runfile('C:/Users/Gordana/ML_Movie_RS/data.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+df_movies2009.columns
+debugfile('C:/Users/Gordana/ML_Movie_RS/data.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+qualified = movies['data'].sort_values('weighted_rating', ascending=False).head(20)
+
+qualified.head(10)
+df_movies2009['rated']
+movies['data'].columns
+from surprise.model_selection import GridSearchCV, KFold, train_test_split
+from sklearn.model_selection import KFold
+kf = KFold(n_splits=5)
+print(kf)
+min(movies['data'].shape)
+min(R_demeaned.shape)
+python -m pip install -U pip
+pip install -U pip
+pip install -U matplotlib
+kf = KFold(n_splits=2)
+for trainset, testset in kf.split(movies['item_ids']):
+    trainset.shape
+    testset.shape
+    
+trainset
+trainset.shape
+testset.shape
+testset.head()
+from surprise import Reader, Dataset,
+from surprise import Reader, Dataset
+import surpise
+for train_index, test_index in kf.split(movies['item_ids']):
+    X_train, X_test = movies['item_ids'].iloc[train_index,:], movies['item_ids'].iloc[test_index,:]
+    
+kf = KFold(n_splits=6)
+for train_index, test_index in kf.split(movies['item_ids']):
+    X_train, X_test = movies['item_ids'].iloc[train_index,:]
+    , movies['item_ids'].iloc[test_index,:]
+    
+kf
+trainset, testset in  train_test_split(df_ratings2009, test_size=0.2)
+trainset, testset=train_test_split(df_ratings2009, test_size=0.2)
+trainset.shape
+testset.shape
+trainset.iloc[5]
+testset.iloc[6]
+trainset, testset=train_test_split(df_ratings2009, test_size=0.2)
+testset.iloc[6]
+testset.shape
+trainset.iloc[5]
+trainset.shape
+from surprise.model_selection import cross_validate
+import suprise
+from surprise.model_selection import cross_validate
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/similarites_Collorative.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/similarites_Collorative.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+df_ratings[X_test].flatten()
+df_ratings[X_test]
+df_ratings[X_test.id]
+df_ratings[X_test.movieId]
+s =df_ratings[X_test.movieId]
+s.shape
+s =df_ratings[X_test.userId]
+s.shape
+predictions_df.shape
+preds_df
+preds_df[R_df.userId]
+preds_df[R_demeaned.userId]
+preds_df[R_demeaned]
+preds_df[R_demeaned].flatten()
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+preds_df
+preds_df.columns
+preds_df.shape
+test_df= X_test.pivot(index = 'userId', columns ='movieId', values = 'rating').fillna(0)
+test_df[preds_df]
+test_df[preds_df.userId]
+test_df.shape
+preds_df.shape
+preds_df.columns
+test_df.columns
+test_df[preds_df.movieId]
+test_df[preds_df.iloc[0]]
+res =test_df[preds_df.iloc[0]]
+import seaborn as sns
+import matplotlib as mpl
+import matplotlib 
+
+## ---(Fri Dec 27 01:15:00 2019)---
+import matplotlib
+import seaborn as sns
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+
+sns.distplot(movies['item_ids']['rating'])
+plt.title('Rating Distribution (all users)')
+
+## ---(Fri Dec 27 13:12:38 2019)---
+from surprise import Reader, Dataset, SVD, evaluate, accuracy
+from surprise import Reader, Dataset, SVD, evaluate, accuracy
+from surprise.model_selection import GridSearchCV, KFold, train_test_split
+from surprise.model_selection.validation import cross_validate
+from surprise.prediction_algorithms.matrix_factorization import SVDpp
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+movies['item_ids'].rating
+movies['item_ids'].rating.max
+max(movies['item_ids'].rating)
+min(movies['item_ids'].rating)
+ls=movies['item_ids'].rating
+ls=list(movies['item_ids'].rating)
+ls=list(movies['item_ids'].rating.unique)
+ls
+ls.unique
+set(ls)
+m =list(set(ls))
+Reader(m)
+(1,5)
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+model_coll
+Dataset.load_builtin(model_coll.ratings)
+Dataset.load_builtin(model_coll.modelRatings)
+model_coll.modelRatings[['userId', 'movieId', 'rating']]
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+from itertools import permutations
+lsLearning =[0.001, 0.005, 0.004, 0.003,0.002]
+lsFactor = [100, 14, 20 ,50, 80]
+lsRegular =[0.02, 0.01, 0.04, 0.03, 0.02 ]
+permutations(list(zip(lsLearning, lsFactor)), 2)
+perm = list(permutations(list(zip(lsLearning, lsFactor)), 2))
+perm[0]
+perm = list(permutations(list(zip(lsLearning, lsFactor)), 1))
+perm[0]
+perm[2]
+zip(perm, lsRegular)
+tr=list(zip(perm, lsRegular))
+tr[0]
+perm = list(permutations(list(zip(lsLearning, lsFactor))))
+perm[0]
+perm[1]
+zip(perm, lsRegular, perm)
+tr
+perm = list(permutation(zip(lsLearning, lsFactor,  lsRegular)))
+perm = list(permutations(zip(lsLearning, lsFactor,  lsRegular)))
+perm[0]
+len(perm)
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+plot
+plt.scatter(plot[1], plot[3])
+plt.show()
+import matplotlib.pyplot as plt
+plt.scatter(plot[1], plot[3])
+
+plt.show()
+plt.scatter(plot[1], plot[3])
+plt.set_xlabel(r'Avg. RMSE', fontsize=15)
+plt.set_ylabel(r'No of factors', fontsize=15)
+plt.show()
+plt.scatter(plot[1], plot[3]. 'x')
+plt.xlabel(r'Avg. RMSE', fontsize=15)
+plt.ylabel(r'No of factors', fontsize=15)
+plt.show()
+plt.scatter(plot[1], plot[3], 'x')
+plt.xlabel(r'Avg. RMSE', fontsize=15)
+plt.ylabel(r'No of factors', fontsize=15)
+plt.show()
+plt.scatter(plot[1], plot[3])
+plt.xlabel(r'Avg. RMSE', fontsize=15)
+plt.ylabel(r'No of factors', fontsize=15)
+plt.show()
+plt.scatter(plot[1], plot[3])
+plt.ylabel(r'Avg. RMSE')
+plt.xlabel(r'No of factors')
+plt.show()
+plot
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/similarites_Collorative.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+permutations(zip(lsLearning, lsRegular))
+perm =permutations(zip(lsLearning, lsRegular))
+list(perm)
+list(perm)[0]
+list(perm)
+runfile('C:/Users/Gordana/ML_Movie_RS/similarites_Collorative.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+plot
+runfile('C:/Users/Gordana/ML_Movie_RS/similarites_Collorative.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+plot
+kf = KFold(n_splits=5)
+trainset, testset =kf.split(data):
+    
+    
+trainset, testset =kf.split(data)
+trainset, testset =kf.split(model_coll.modelRatings)
+reader =Reader(rating_scale=(1, 5))
+data = Dataset.load_from_df(model_coll.modelRatings[['userId', 'movieId', 'rating']], reader)
+trainset, testset =kf.split(data)
+trainset, testset =split(data)
+m = kf.split(data)
+trainset, testset =m[0]
+m
+m = list(kf.split(data))
+m
+len(m)
+wtf = list(kf.split(data))
+len(wtf)
+wtf[0]
+len(wtf[0])
+len(wtf[1])
+len(wtf[1][1])
+len(wtf[1][0])
+trainset, testset = train_test_split(data, test_size=.25)
+# We'll use the famous SVD algorithm.
+algo = SVD()
+
+# Train the algorithm on the trainset, and predict ratings for the testset
+algo.fit(trainset)
+predictions = algo.test(testset)
+
+# Then compute RMSE
+accuracy.rmse(predictions)
+trainset.shape
+model_coll.modelRatings['rating'].value_counts()
+
+alt_ratings = four_star
+model_coll.modelRatings['rating'].value_counts()
+trainset, testset = train_test_split(data, test_size=.25)
+trainset.shape
+testset.shape
+testset
+trainset.head()
+trainset
+algo.fit(trainset)
+
+sns.distplot(movie['item_ids']['rating'])
+plt.title('Rating Distribution (all users)')
+import seaborn as sns
+
+sns.distplot(movie['item_ids']['rating'])
+plt.title('Rating Distribution (all users)')
+
+sns.distplot(movies['item_ids']['rating'])
+plt.title('Rating Distribution (all users)')
+predictions = algo.test(testset)
+
+# Compute and print Root Mean Squared Error
+accuracy.rmse(predictions, verbose=True)
+runfile('C:/Users/Gordana/ML_Movie_RS/data.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+movies['item_ids']['rating'].value_counts()
+df_ratings=movies['item_ids']
+df_ratings['rating'] = df_ratings['rating'].apply( lambda x: x+0.7 if x>1.0 else x )
+df_ratings['rating'].value_counts()
+df_ratings['rating'] = df_ratings['rating'].apply( lambda x: x+1 if x>1.0 else x )
+df_ratings['rating'].value_counts()
+runfile('C:/Users/Gordana/ML_Movie_RS/data.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+movies['item_ids']['rating'].value_counts()
+
+sns.distplot(movie['item_ids']['rating'])
+plt.title('Rating Distribution (all users)')
+
+sns.distplot(movies['item_ids']['rating'])
+plt.title('Rating Distribution (all users)')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+def check_system(Id,movieId,limit,df,userId='userId',algo):
+    '''
+    This function checks the predicted rating against ratings made by the user
+    And takes in an int UserId (Id)
+    an int limit (the number of movies returned)
+    dataframe columns necessary (movieId, userId)
+    a dataframe of ratings (df)
+    an algorithm (algo)
+    '''
+    # Isolates necessary columns from the dataframe
+    df = df[[movieId,userId,'rating']]
+    
+    # Takes a subsample of the user's ratings
+    user_df = df[df['userId'] == Id]
+    if user_df.shape[0] >= df[userId].value_counts().mean():
+        user_df = user_df.sample(frac=.10)
+    else:
+        user_df = user_df.sample(frac=.50)
+
+    # Builds the dataframe to be returned     
+    user_df['est'] = user_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    user_df['error'] = user_df['est']-user_df['rating']
+    user_df['avg_error'] = user_df['error'].mean()
+    
+    # Returns a dataframe dependent on what the limit is set to
+    if limit == None:
+        user_df = pd.merge(user_df,movies_df,on=movieId)
+        return user_df[[userId,movieId,'title','rating','est','error','avg_error']]
+    else:
+        if limit >= user_df.shape[0]:
+            user_df = pd.merge(user_df,movies_df,on=movieId)
+            return user_df[[userId,movieId,'title','rating','est','error','avg_error']]
+        else:
+            user_df = user_df.head(limit)
+            user_df = pd.merge(user_df,movies_df,on=movieId)
+            return user_df[[userId,movieId,'title','rating','est','error','avg_error']]
+def check_system(Id,movieId='movieId',limit,df,userId='userId',algo):
+    '''
+    This function checks the predicted rating against ratings made by the user
+    And takes in an int UserId (Id)
+    an int limit (the number of movies returned)
+    dataframe columns necessary (movieId, userId)
+    a dataframe of ratings (df)
+    an algorithm (algo)
+    '''
+    # Isolates necessary columns from the dataframe
+    df = df[[movieId,userId,'rating']]
+    
+    # Takes a subsample of the user's ratings
+    user_df = df[df['userId'] == Id]
+    if user_df.shape[0] >= df[userId].value_counts().mean():
+        user_df = user_df.sample(frac=.10)
+    else:
+        user_df = user_df.sample(frac=.50)
+
+    # Builds the dataframe to be returned     
+    user_df['est'] = user_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    user_df['error'] = user_df['est']-user_df['rating']
+    user_df['avg_error'] = user_df['error'].mean()
+    
+    # Returns a dataframe dependent on what the limit is set to
+    if limit == None:
+        user_df = pd.merge(user_df,movies_df,on=movieId)
+        return user_df[[userId,movieId,'title','rating','est','error','avg_error']]
+    else:
+        if limit >= user_df.shape[0]:
+            user_df = pd.merge(user_df,movies_df,on=movieId)
+            return user_df[[userId,movieId,'title','rating','est','error','avg_error']]
+        else:
+            user_df = user_df.head(limit)
+            user_df = pd.merge(user_df,movies_df,on=movieId)
+            return user_df[[userId,movieId,'title','rating','est','error','avg_error']]
+df = movies['itemUser'][['movieId','userId','rating']]
+
+user_df = df[df['userId'] == 118250]
+user_df.shape[0]
+user_df.shape
+user_df = df[df['userId'] == 11838]
+user_df.shape
+df[userId].value_counts().mean()
+df['userId'].value_counts().mean()
+user_df = user_df.sample(frac=.10)
+user_df.shape
+user_df['est'] = user_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+user_df['est'] = user_df['movieId'].apply(lambda x: round(algo.predict(11838,x).est,2))
+user_df['error'] = user_df['est']-user_df['rating']
+user_df['avg_error'] = user_df['error'].mean()
+user_df = user_df.head(5)
+user_df = pd.merge(user_df,movies['data'],left_on='movieId', right_on='id')
+user_df[[userId,movieId,'title','rating','est','error','avg_error']]
+user_df[['userId','movieId','title','rating','est','error','avg_error']]
+user_df = user_df.head(5)
+user_df.shape
+algo
+user_df['est'] = user_df['movieId'].apply(lambda x: round(alg.predict(Id,x).est,2))
+def check_system(Id,limit,df,movies,algo):
+
+    # Isolates necessary columns from the dataframe
+    df = df[['movieId','userId','rating']]
+    
+    # Takes a subsample of the user's ratings
+    user_df = df[df['userId'] == Id]
+    if user_df.shape[0] >= df['userId'].value_counts().mean():
+        user_df = user_df.sample(frac=.10)
+    else:
+        user_df = user_df.sample(frac=.50)
+
+    # Builds the dataframe to be returned     
+    user_df['est'] = user_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    user_df['error'] = user_df['est']-user_df['rating']
+    user_df['avg_error'] = user_df['error'].mean()
+    
+    # Returns a dataframe dependent on what the limit is set to
+    if limit == None:
+        user_df = pd.merge(user_df,movies,left_on='movieId', right_on='id')
+        return user_df[['userId','movieId','title','rating','est','error','avg_error']]
+    else:
+        if limit >= user_df.shape[0]:
+            user_df = pd.merge(user_df,movies,left_on='movieId', right_on='id')
+            return user_df[['userId','movieId','title','rating','est','error','avg_error']]
+        else:
+            user_df = user_df.head(limit)
+            user_df = pd.merge(user_df,movies,left_on='movieId', right_on='id')
+            return user_df[['userId','movieId','title','rating','est','error','avg_error']]
+            
+check_system( 11838, 3, movies['itemUser'], movies['data'], alg)
+check_system( 11838, None, movies['itemUser'], movies['data'], alg)
+check_system( 11839, None, movies['itemUser'], movies['data'], alg)
+find_user = movies['itemUser'].copy()
+find_user['count'] = 1
+find_user = find_user.groupby('userId').sum()
+find_user
+max(find_user['count'])
+find_user[find_user['count'] == 144].head(1)
+check_system( 581, 10, movies['itemUser'], movies['data'], alg)
+find_user[find_user['count'] == 590].head(1)
+find_user[find_user['count'] == 9279].head(1)
+check_system( 8659, 10, movies['itemUser'], movies['data'], alg)
+find_user[find_user['count'] == 35].head(1)
+check_system( 54, 10, movies['itemUser'], movies['data'], alg)
+movie_choices = df['movieId'].unique()
+temp_df = df[df['userId'] == 8659]
+watched_movs = temp_df['movieId'].unique()
+watched_movs.shape
+movie_choices.shape
+unwatched = np.setdiff1d(movie_choices,watched_movs)
+unwatched.shape
+def predicted_top_n(Id, n, df, movies, algo):
+    '''
+    This function returns n movies, sorted by predicted user rating, from a random sample of movies. 
+    '''
+    df = df[['movieId','userId','rating']]
+
+    movie_choices = df['movieId'].unique()
+    
+    # Take out movies the user has already watched
+    temp_df = df[df['userId'] == Id]
+    watched_movs = temp_df['movieId'].unique()
+    unwatched = np.setdiff1d(movie_choices,watched_movs)
+    movies = unwatched
+        
+    # Build the dataframe that we'll return
+    predicted_df = pd.DataFrame()
+    predicted_df['movieId'] = movies
+    predicted_df['userId'] = Id
+    predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    predicted_df = predicted_df.sort_values(by='est', ascending=False)
+    predicted_df = predicted_df.head(n)
+    predicted_df = pd.merge(predicted_df,'movies_df',left_on='movieId', right_on ='id')
+    return predicted_df[['userId','title','est']]
+    
+predicted_top_n(8659, 10, movies['itemUser'], movies['data'], alg)
+def predicted_top_n(Id, n, df, movies, algo):
+    '''
+    This function returns n movies, sorted by predicted user rating, from a random sample of movies. 
+    '''
+    df = df[['movieId','userId','rating']]
+
+    movie_choices = df['movieId'].unique()
+    
+    # Take out movies the user has already watched
+    temp_df = df[df['userId'] == Id]
+    watched_movs = temp_df['movieId'].unique()
+    unwatched = np.setdiff1d(movie_choices,watched_movs)
+    movies = unwatched
+        
+    # Build the dataframe that we'll return
+    predicted_df = pd.DataFrame()
+    predicted_df['movieId'] = movies
+    predicted_df['userId'] = Id
+    predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    predicted_df = predicted_df.sort_values(by='est', ascending=False)
+    predicted_df = predicted_df.head(n)
+    predicted_df = pd.merge(predicted_df,movies ,left_on='movieId', right_on ='id')
+    return predicted_df[['userId','title','est']]
+    
+predicted_top_n(8659, 10, movies['itemUser'], movies['data'], alg)
+movies = unwatched
+predicted_df = pd.DataFrame()
+predicted_df['movieId'] = movies
+predicted_df['userId'] = 8659
+predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(alg.predict(Id,x).est,2))
+predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(alg.predict(8659,x).est,2))
+predicted_df = predicted_df.head(2)
+predicted_df = predicted_df.shape
+predicted_df.shape
+predicted_df
+predicted_df = pd.DataFrame()
+predicted_df['movieId'] = movies
+predicted_df['userId'] = 8659
+predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(alg.predict(8659,x).est,2))
+predicted_df.shape
+predicted_df = predicted_df.head(5)
+predicted_df.shape
+predicted_df.desc
+predicted_df.iloc[0]
+predicted_df = pd.merge(predicted_df,movies['data'] ,left_on='movieId', right_on ='id')
+predicted_df.iloc[0]
+predicted_df.type
+type(predicted_df)
+new = pd.merge(predicted_df,movies['data'] ,left_on='movieId', right_on ='id')
+predicted_df['movieId']
+movies['data']['id']
+movies['data']
+movies
+movies = load_dataset()
+new = pd.merge(predicted_df,movies['data'] ,left_on='movieId', right_on ='id')
+new[['userId','title','est']]
+predicted_df
+find_user
+runfile('C:/Users/Gordana/ML_Movie_RS/data.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+movies = load_dataset()
+runfile('C:/Users/Gordana/ML_Movie_RS/data.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+movies = load_dataset()
+movies['data'].shape
+movies['data']['release_date']
+find_user
+mean(find_user['count'])
+min(find_user['count'])
+max(find_user['count'])
+avg(find_user['count'])
+find_user['count'].mean()
+find_user[find_user['count'] == 92].head(1)
+def predicted_top_n(Id, n, df, movies, algo):
+    '''
+    This function returns n movies, sorted by predicted user rating, from a random sample of movies. 
+    '''
+    df = df[['movieId','userId','rating']]
+
+    movie_choices = df['movieId'].unique()
+    
+    # Take out movies the user has already watched
+    temp_df = df[df['userId'] == Id]
+    watched_movs = temp_df['movieId'].unique()
+    unwatched = np.setdiff1d(movie_choices,watched_movs)
+    movies = unwatched
+        
+    # Build the dataframe that we'll return
+    predicted_df = pd.DataFrame()
+    predicted_df['movieId'] = movies
+    predicted_df['userId'] = Id
+    predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    predicted_df = predicted_df.sort_values(by='est', ascending=False)
+    predicted_df = predicted_df.head(n)
+    predicted_df = pd.merge(predicted_df,movies ,left_on='movieId', right_on ='id')
+    return predicted_df[['userId','title','est']]
+    
+predicted_top_n(873, 10, movies['itemUser'], movies['data'])
+predicted_top_n(873, 10, movies['itemUser'], movies['data'], alg)
+check_system(873, 10, movies['itemUser'], movies['data'], alg)
+check_system(873, None, movies['itemUser'], movies['data'], alg)
+model = movies['itemUser']
+model = model[model['userId'] == 118205]
+model
+model = model[model['userId'] == 118205]
+model = movies['itemUser']
+max(movies['data']['weighted_rating'])
+famos=movies['data'][movies['data']['weighted_rating']>8.0]
+famos
+famos.head(5)
+famos['id'].head(5)
+famos['title','id'].head(5)
+famos[['title','id']].head(5)
+model = model[model['movieId'] == 101]
+model = movies['itemUser']
+accLeon = model[model['movieId'] == 101]
+accLeon
+acc=find_user[find_user['movieId']=101]
+acc=find_user[find_user['movieId']==101]
+acc
+find_user
+acc=find_user[find_user['movieId']==101]
+acc
+accLeon = model[model['movieId'] == 101]
+accLeon
+find_user= model.copy()
+find_user['count'] = 1
+find_user = find_user.groupby('userId').sum()
+acc=find_user[find_user['movieId']==101]
+acc
+find_user
+acc=find_user[find_user['movieId']==103]
+acc
+acc=find_user[find_user['movieId']=101]
+acc=find_user[find_user['movieId']==101]
+acc
+accLeon = model[model['movieId'] == 101]
+accLeon
+sl =accLeon.groupby('userId')
+sl
+sl.shape
+sl =accLeon['userId'].unique
+sl 
+accLeon = model[model['movieId'] == 101]
+accLeon
+check_system(13488, 10, movies['itemUser'], movies['data'], alg)
+check_system(32, 10, movies['itemUser'], movies['data'], alg)
+check_system(13566, 10, movies['itemUser'], movies['data'], alg)
+check_system(13566, None, movies['itemUser'], movies['data'], alg)
+predicted_top_n(13488, 10, movies['itemUser'], movies['data'], alg)
+df = model[['movieId','userId','rating']]
+ovie_choices = df['movieId'].unique()
+movie_choices = df['movieId'].unique()
+temp_df = df[df['userId'] == 13488]
+watched_movs = temp_df['movieId'].unique()
+watched_movs.shape
+unwatched = np.setdiff1d(movie_choices,watched_movs)
+movies = unwatched
+def predicted_top_n(Id, n, df, movies_df, algo):
+    '''
+    This function returns n movies, sorted by predicted user rating, from a random sample of movies. 
+    '''
+    df = df[['movieId','userId','rating']]
+
+    movie_choices = df['movieId'].unique()
+    
+    # Take out movies the user has already watched
+    temp_df = df[df['userId'] == Id]
+    watched_movs = temp_df['movieId'].unique()
+    unwatched = np.setdiff1d(movie_choices,watched_movs)
+    movies = unwatched
+        
+    # Build the dataframe that we'll return
+    predicted_df = pd.DataFrame()
+    predicted_df['movieId'] = movies_df
+    predicted_df['userId'] = Id
+    predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    predicted_df = predicted_df.sort_values(by='est', ascending=False)
+    predicted_df = predicted_df.head(n)
+    predicted_df = pd.merge(predicted_df,movies ,left_on='movieId', right_on ='id')
+    return predicted_df[['userId','title','est']]
+    
+predicted_top_n(13488, 10, movies['itemUser'], movies['data'], alg)
+movies['data']
+movies = load_dataset()
+predicted_top_n(13488, 10, movies['itemUser'], movies['data'], alg)
+movies['data']
+def predicted_top_n(Id, n, df, movies_df, algo):
+    '''
+    This function returns n movies, sorted by predicted user rating, from a random sample of movies. 
+    '''
+    df = df[['movieId','userId','rating']]
+
+    movie_choices = df['movieId'].unique()
+    
+    # Take out movies the user has already watched
+    temp_df = df[df['userId'] == Id]
+    watched_movs = temp_df['movieId'].unique()
+    unwatched = np.setdiff1d(movie_choices,watched_movs)
+    movies = unwatched
+        
+    # Build the dataframe that we'll return
+    predicted_df = pd.DataFrame()
+    predicted_df['movieId'] = movies
+    predicted_df['userId'] = Id
+    predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    predicted_df = predicted_df.sort_values(by='est', ascending=False)
+    predicted_df = predicted_df.head(n)
+    predicted_df = pd.merge(predicted_df,movies_df ,left_on='movieId', right_on ='id')
+    return predicted_df[['userId','title','est']]
+    
+predicted_top_n(13488, 10, movies['itemUser'], movies['data'], alg)
+movies['data'].sort_values(by='weighted_rating' , ascending = False)
+movies['data'].sort_values(by='weighted_rating' , ascending = False).head(10)
+movies['data'].sort_values(by='weighted_rating' , ascending = False)[['titile', 'vote_average', 'vote_count', 'weighted_rating']].head(10)
+movies['data'].sort_values(by='weighted_rating' , ascending = False)[['title', 'vote_average', 'vote_count', 'weighted_rating']].head(10)
+disply(movies['data'].sort_values(by='weighted_rating' , ascending = False)[['title', 'vote_average', 'vote_count', 'weighted_rating']].head(10))
+display(movies['data'].sort_values(by='weighted_rating' , ascending = False)[['title', 'vote_average', 'vote_count', 'weighted_rating']].head(10))
+display_html(movies['data'].sort_values(by='weighted_rating' , ascending = False)[['title', 'vote_average', 'vote_count', 'weighted_rating']].head(10))
+scatter_matrix(movies['data'].sort_values(by='weighted_rating' , ascending = False)[['title', 'vote_average', 'vote_count', 'weighted_rating']].head(10), alpha=0.2)
+pd.plotting.scatter_matrix(movies['data'].sort_values(by='weighted_rating' , ascending = False)[['title', 'vote_average', 'vote_count', 'weighted_rating']].head(10), alpha=0.2)
+movies['data']
+movies['data'].columns
+sns.scatterplot(x='vote_average', y='weighted_rating',data=movies['data'])
+plt.title('Transformed Weighted Ratings vs. Vote Average')
+plt.xlabel('Vote Average')
+plt.ylabel('Weighted Rating')
+plt.savefig('wr-vs-va')
+plt.show()plt.savefig('wr-vs-va.png')
+plt.show()
+C:\Users\Gordana\ML_Movie_RS
+plt.savefig('wr-vs-va')
+sns.scatterplot(x='vote_average', y='weighted_rating',data=movies['data'])
+plt.title('Transformed Weighted Ratings vs. Vote Average')
+plt.xlabel('Vote Average')
+plt.ylabel('Weighted Rating')
+plt.savefig('wr-vs-va.png')
+sns.scatterplot(x='vote_average', y='weighted_rating',data=movies['data'])
+plt.title('Transformed Weighted Ratings vs. Vote Average')
+plt.xlabel('Vote Average')
+plt.ylabel('Weighted Rating')   
+svm =sns.scatterplot(x='vote_average', y='weighted_rating',data=movies['data'])
+plt.title('Transformed Weighted Ratings vs. Vote Average')
+plt.xlabel('Vote Average')
+plt.ylabel('Weighted Rating')
+svm.savefig('wr-va.png')
+figure = svm.get_figure()    
+figure.savefig('svm_conf.png', dpi=400)
+param_grid = {'n_epochs': [5, 10], 'lr_all': [0.002, 0.005],
+              'reg_all': [0.4, 0.6]}
+grid_search = GridSearch(SVD, param_grid, measures=['RMSE', 'FCP'])
+import sklearn.model_selection
+from  sklearn.model_selection import GridSearchCV
+from  sklearn.model_selection import GridSearch
+grid_search = GridSearch(SVD, param_grid, measures=['RMSE', 'FCP'])
+grid_search = GridSearchCV(SVD, param_grid, measures=['RMSE', 'FCP'])
+grid_search = GridSearchCV(SVD, param_grid)
+data
+grid_search.evaluate(data)
+data.folds
+data.folds()
+param_grid = {'n_epochs': [5, 10], 'lr_all': [0.002, 0.005],
+              'reg_all': [0.4, 0.6]}
+grid_search = GridSearchCV(SVD, param_grid)
+grid_search.fit()
+trainset, testset = train_test_split(data, test_size=.2)
+data
+data.iloc[0]
+reader = Reader(rating_scale=(1, 5))
+start = time.time()
+algo = SVD(verbose=True)
+data = Dataset.load_from_df(model[['userId', 'movieId', 'rating']], reader)
+trainset, testset = train_test_split(data, test_size=.25)
+reader = Reader(rating_scale=(1, 5))
+start = time.time()
+algo = SVD(verbose=True)
+data = Dataset.load_from_df(model[['userId', 'movieId', 'rating']], reader)
+trainset, testset = train_test_split(model, test_size=.25)
+data= Dataset.load_from_df(trainset[['userId', 'movieId', 'rating']], reader)
+param_grid = {'n_epochs': [5, 10], 'lr_all': [0.002, 0.005],
+              'reg_all': [0.4, 0.6]}
+grid_search = GridSearchCV(SVD, param_grid)
+grid_search.fit(data)
+grid_search = GridSearchCV(SVD, param_grid, scoring ='RMSE')
+grid_search.fit(data)
+grid_search = GridSearchCV(SVD, param_grid, scoring =None)
+grid_search.fit(data)
+s = [0.002, 0.005]
+type(s)
+def  tuning (train, test):
+    lsLearning =[0.001, 0.005, 0.004, 0.003,0.002]
+    data = Dataset.load_from_df(train[['userId', 'movieId', 'rating']], reader)
+    rmseLearning =[]
+    rmseRegular =[]
+    for item in lsLearning:
+        algo = SVD(verbose=True, lr_all= item)
+        algo.fit(train)
+        predictions = algo.test(test)
+        rmseLearning.append((item, accuracy.rmse(predictions, verbose=True)))
+    lsRegular =[0.02, 0.01, 0.04, 0.03, 0.02 ]
+    for item in lsRegular:
+        algo = SVD(verbose=True, reg_all= item)
+        algo.fit(train)
+        predictions = algo.test(test)
+        rmseRegular.append((item, accuracy.rmse(predictions, verbose=True)))
+    return rmseLearning , rmseRegular
+    
+def  tuning (train, test):
+    lsLearning =[0.001, 0.005, 0.004, 0.003,0.002]
+    data = Dataset.load_from_df(train[['userId', 'movieId', 'rating']], reader)
+    test =  Dataset.load_from_df(test[['userId', 'movieId', 'rating']], reader)
+    rmseLearning =[]
+    rmseRegular =[]
+    for item in lsLearning:
+        algo = SVD(verbose=True, lr_all= item)
+        algo.fit(data)
+        predictions = algo.test(test)
+        rmseLearning.append((item, accuracy.rmse(predictions, verbose=True)))
+    lsRegular =[0.02, 0.01, 0.04, 0.03, 0.02 ]
+    for item in lsRegular:
+        algo = SVD(verbose=True, reg_all= item)
+        algo.fit(data)
+        predictions = algo.test(test)
+        rmseRegular.append((item, accuracy.rmse(predictions, verbose=True)))
+    return rmseLearning , rmseRegular
+    
+transet
+trainset
+l, r = tuning(trainset, testset)
+trainset, testset = train_test_split(model, test_size=.2)
+l, r = tuning(trainset, testset)
+def  tuning (train, test):
+    reader = Reader(rating_scale=(1, 5))
+    lsLearning =[0.001, 0.005, 0.004, 0.003,0.002]
+    data = Dataset.load_from_df(train[['userId', 'movieId', 'rating']], reader)
+    test =  Dataset.load_from_df(test[['userId', 'movieId', 'rating']], reader)
+    rmseLearning =[]
+    rmseRegular =[]
+    for item in lsLearning:
+        algo = SVD(verbose=True, lr_all= item)
+        algo.fit(data)
+        predictions = algo.test(test)
+        rmseLearning.append((item, accuracy.rmse(predictions, verbose=True)))
+    lsRegular =[0.02, 0.01, 0.04, 0.03, 0.02 ]
+    for item in lsRegular:
+        algo = SVD(verbose=True, reg_all= item)
+        algo.fit(data)
+        predictions = algo.test(test)
+        rmseRegular.append((item, accuracy.rmse(predictions, verbose=True)))
+    return rmseLearning , rmseRegular
+    
+l, r = tuning(trainset, testset)
+svd_my(model)
+data = Dataset.load_from_df(trainset[['userId', 'movieId', 'rating']], reader)
+algo = SVD(verbose=True)
+algo.fit(data)
+reader = Reader(rating_scale=(1, 5))
+data = Dataset.load_from_df(trainset[['userId', 'movieId', 'rating']], reader)
+algo.fit(data)
+datas=data.build_full_trainset()
+algo.fit(datas)
+predictions = algo.test(testset)
+test =  Dataset.load_from_df(test[['userId', 'movieId', 'rating']], reader)
+test =  Dataset.load_from_df(testset[['userId', 'movieId', 'rating']], reader)
+predictions = algo.test(test)
+tests= test.build_full_trainset()
+predictions = algo.test(tests)
+from surprise.model_selection import train_test_split
+trainset, testset = train_test_split(data, test_size=.25)
+
+def  tuning (data):
+    trainset, testset = train_test_split(data, test_size=.25)
+    #reader = Reader(rating_scale=(1, 5))
+    lsLearning =[0.001, 0.005, 0.004, 0.003,0.002]
+    #data = Dataset.load_from_df(train[['userId', 'movieId', 'rating']], reader)
+    #datas = data.build_full_trainset()
+    #test =  Dataset.load_from_df(test[['userId', 'movieId', 'rating']], reader)
+    #tests= test.build_full_trainset()
+    rmseLearning =[]
+    rmseRegular =[]
+    for item in lsLearning:
+        algo = SVD(verbose=True, lr_all= item)
+        algo.fit(trainset)
+        predictions = algo.test(testset)
+        rmseLearning.append((item, accuracy.rmse(predictions, verbose=True)))
+    lsRegular =[0.02, 0.01, 0.04, 0.03, 0.02 ]
+    for item in lsRegular:
+        algo = SVD(verbose=True, reg_all= item)
+        algo.fit(trainset)
+        predictions = algo.test(testset)
+        rmseRegular.append((item, accuracy.rmse(predictions, verbose=True)))
+    return rmseLearning , rmseRegular
+    
+data
+l, r = tuning(data)
+l
+surprise.evaluate.GridSearch()
+import suprise
+import surprise
+surprise.evaluate.GridSearch()
+surprise.evaluate.evaluate(data, SVD)
+surprise.model_selection.search.GridSearchCV(algo_class, param_grid)
+surprise.model_selection.search.GridSearchCV(SVD, param_grid)
+ls = surprise.model_selection.search.GridSearchCV(SVD, param_grid)
+ls.evaluate(data)
+m =ls.fit(data)
+param_grid = { 'lr_all': [0.002, 0.005]}
+ls = surprise.model_selection.search.GridSearchCV(SVD, param_grid)
+m =ls.fit(data)
+results_df = pd.DataFrame.from_dict(m.cv_results)
+m.cv_results
+m.best_estimator
+m
+ls.best_estimator
+results_df = pd.DataFrame.from_dict(ls.cv_results)
+results_df
+ls.best_estimator[0]
+ls.best_estimator
+ls.best_estimator['rmse']
+list(ls.best_estimator['rmse'])
+ls.best_estimator['rmse']
+param_grid = {'lr_all': [0.002, 0.005, 0.003, 0.002],
+              'reg_all': [0.4, 0.6, 0.2, 0.3] , 'n_epochs': [5, 5,5,5]}
+ls = surprise.model_selection.search.GridSearchCV(SVD, param_grid)
+dat.shape
+data.shape
+data
+ls.fit(data)
+def  tuning (data):
+    trainset, testset = train_test_split(data, test_size=.20)
+    reader = Reader(rating_scale=(1, 5))
+    lsLearning =[0.001, 0.005,0.002]
+    #data = Dataset.load_from_df(train[['userId', 'movieId', 'rating']], reader)
+    #datas = data.build_full_trainset()
+    #test =  Dataset.load_from_df(test[['userId', 'movieId', 'rating']], reader)
+    #tests= test.build_full_trainset()
+    rmseLearning =[]
+    rmseRegular =[]
+    for item in lsLearning:
+        algo = SVD(verbose=True, lr_all= item, n_epochs = 5)
+        algo.fit(trainset)
+        predictions = algo.test(testset)
+        rmseLearning.append((item, accuracy.rmse(predictions, verbose=True)))
+    lsRegular =[0.02, 0.01, 0.02 ]
+    for item in lsRegular:
+        algo = SVD(verbose=True, reg_all= item)
+        algo.fit(trainset)
+        predictions = algo.test(testset)
+        rmseRegular.append((item, accuracy.rmse(predictions, verbose=True)))
+    return rmseLearning , rmseRegular
+    
+l, r = tuning(data)
+l
+r
+ls.best_estimator['rmse']
+l 
+r
+dic={'split0_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97]
+'split1_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97], 
+'param_n_epochs':   [10, 10, 10, 10, 20, 20, 20, 20]
+'param_lr_all':     [0.0, 0.0, 0.01, 0.01, 0.0, 0.0, 0.01, 0.01]
+'param_reg_all':    [0.4, 0.6, 0.4, 0.6, 0.4, 0.6, 0.4, 0.6]}
+dic={'split0_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97]
+'split1_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97], 
+'param_n_epochs':   [10, 10, 10, 10, 20, 20, 20, 20],
+'param_lr_all':     [0.0, 0.0, 0.01, 0.01, 0.0, 0.0, 0.01, 0.01],
+'param_reg_all':    [0.4, 0.6, 0.4, 0.6, 0.4, 0.6, 0.4, 0.6]}
+dic={'split0_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97],
+'split1_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97], 
+'param_n_epochs':   [10, 10, 10, 10, 20, 20, 20, 20],
+'param_lr_all':     [0.0, 0.0, 0.01, 0.01, 0.0, 0.0, 0.01, 0.01],
+'param_reg_all':    [0.4, 0.6, 0.4, 0.6, 0.4, 0.6, 0.4, 0.6]}
+ana = pd.DataFrame([dic['split0_test_rmse'], dic['param_n_epochs'], dic['param_lr_all'], dic['param_reg_all']])
+scatter_matrix(ana)
+sns.scatter_matrix(ana)
+from pandas.tools.plotting import scatter_matrix
+scatter_matrix(ana)
+pd.plotting.scatter_matrix(ana, alpha=0.5)
+pd.plotting.scatter_matrix(ana[['split0_test_rmse','param_n_epochs','param_lr_all','param_reg_all']], alpha=0.5)
+pd.plotting.scatter_matrix(ana['split0_test_rmse','param_n_epochs','param_lr_all','param_reg_all'], alpha=0.5)
+ana['split0_test_rmse']=ana['target']
+pd.plotting.scatter_matrix(ana, alpha=0.5, figsize=(1,4))
+pd.plotting.scatter_matrix(ana['split0_test_rmse'], alpha=0.5)
+ana[0]
+pd.plotting.scatter_matrix(ana[0,1], alpha=0.5, figsize=(1,4))
+ana[[0,1]]
+pd.plotting.scatter_matrix(ana[[0,1]], alpha=0.5)
+plt.scatter(ana[0], ana[1])
+ana[0]
+ana[1]
+ana
+makearr = []
+for i in dic.items()
+pd.DataFrame.from_dict(dic)
+ana=pd.DataFrame.from_dict(dic)
+pd.plotting.scatter_matrix(ana, alpha=0.5)
+plt.scatter(ana['split0_test_rmse'], ana['param_lr_all'])
+plt.scatter(ana['param_lr_all'], ana['split0_test_rmse'])
+
+for ind, i in enumerate(dict['param_n_epochs']):
+    plt.plot(ana['param_lr_all'], ana['split0_test_rmse'], label='C: ' + str(i))
+plt.legend()
+plt.xlabel('learning rate')
+plt.ylabel('RMSE')
+plt.show()
+
+for ind, i in enumerate(list(dict['param_n_epochs'])):
+    plt.plot(ana['param_lr_all'], ana['split0_test_rmse'], label='C: ' + str(i))
+plt.legend()
+plt.xlabel('learning rate')
+plt.ylabel('RMSE')
+plt.show()
+scores = [x for x in list(dic['split0_test_rmse'])]
+scores = np.array(scores).reshape(len(8), len(8))
+scores = [x for x in list(dic['split0_test_rmse'])]
+scores = np.array(scores).reshape(8, 8)
+fig, ax = plt.subplots(1, 1)
+    sns.pointplot(x='param_lr_all', y=metric, hue='split0_test_rmse', data=cv_results, ci=99, n_boot=64, ax=ax)
+    ax.set_title("CV Grid Search Results")
+    ax.set_xlabel('param_lr_all')
+    ax.set_ylabel(metric)
+g = sns.catplot(x="param_lr_all", y="split0_test_rmse", hue="param_reg_all", col="param_n_epochs",  
+                capsize=.6, palette="YlGnBu_d", height=6, aspect=.75,  
+                kind="point", data=ana)  
+g.despine(left=True)
+g = sns.catplot(x="param_lr_all", y="split0_test_rmse", hue="param_reg_all", col="param_n_epochs",  
+                palette="YlGnBu_d", height=6, aspect=.75,  
+                kind="point", data=ana)  
+g.despine(left=True)
+g = sns.catplot(x="param_lr_all", y="split0_test_rmse", hue="param_reg_all", col="param_n_epochs",  
+                palette="YlGnBu_d",  
+                kind="point", data=ana)  
+g.despine(left=True)
+g = sns.PairGrid(ana, y_vars="split0_test_rmse",  
+                 x_vars=["param_lr_all", "param_reg_all", "param_n_epochs"],  
+                 )
+g.map(sns.pointplot, scale=1.3, errwidth=4, color="xkcd:plum")  
+g.set(ylim=(0, 1))  
+sns.despine(fig=g.fig, left=True)
+g.map(sns.pointplot, scale=1.3, errwidth=4, color="xkcd:plum")  
+
+g.set(ylim=(0, 1))  
+sns.despine(fig=g.fig, left=True)
+titanic = sns.build_datset(ana)
+titanic = sns.load_datset(ana)
+titanic = sns.load_dataset(ana)
+g = sns.PairGrid(ana, y_vars="split0_test_rmse",  
+                 x_vars=["param_lr_all", "param_reg_all", "param_n_epochs"],  
+                 )
+g = sns.PairGrid(data=ana, y_vars="split0_test_rmse",  
+                 x_vars=["param_lr_all", "param_reg_all", "param_n_epochs"],  
+                 )
+titanic
+titanic = sns.load_dataset(ana)
+titanic
+ana.to_csv("titanic")
+titanic = sns.load_dataset("titanic")
+g = sns.PairGrid(titanic, y_vars="split0_test_rmse",  
+                 x_vars=["param_lr_all", "param_reg_all", "param_n_epochs"],  
+                 )
+titanic
+ana.to_csv("csv")
+titanic = sns.load_dataset("csv")
+ye = sns.load_dataset("csv")
+ana
+ye = sns.load_dataset("csv.csv")
+ye = sns.load_dataset("C://Users//Gordana//ML_Movie_RS//csv.csv")
+g = sns.PairGrid(data=ana, y_vars="split0_test_rmse",  
+                 x_vars=["param_lr_all", "param_reg_all", "param_n_epochs"]  
+                 )
+sns.PairGrid(data=ana, y_vars="split0_test_rmse",  
+                 x_vars=["param_lr_all", "param_reg_all", "param_n_epochs"]  
+                 )
+sns.pointplot(x="param_lr_all", y="split0_test_rmse",   
+              data=ana,   
+              markers="d", scale=.75, ci=None)
+ana['param_lr_all'] = l
+len(l)
+ana['param_lr_all'] = l+l+[0.005,0.005]
+sns.pointplot(x="param_lr_all", y="split0_test_rmse",   
+              data=ana,   
+              markers="d", scale=.75, ci=None)
+ana['param_lr_all']
+dic={'split0_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97],
+'split1_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97], 
+'param_n_epochs':   [35, 30, 25, 20, 15, 10, 20, 20],
+'param_lr_all':     [0.0, 0.5, 0.2, 0.08, 0.005, 0.002, 0.001, 0.001],
+'param_reg_all':    [0.7, 0.5, 0.4, 0.6, 0.4, 0.03, 0.01, 0.02]}
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+l, r = tuning(data)
+data
+l, r = tuning(data)
+def  tuning (data):
+    trainset, testset = train_test_split(data, test_size=.20)
+    reader = Reader(rating_scale=(1, 5))
+    lsLearning  =[0.0, 0.5, 0.2, 0.08, 0.005, 0.002, 0.001, 0.001]
+    #data = Dataset.load_from_df(train[['userId', 'movieId', 'rating']], reader)
+    #datas = data.build_full_trainset()
+    #test =  Dataset.load_from_df(test[['userId', 'movieId', 'rating']], reader)
+    #tests= test.build_full_trainset()
+    rmseLearning =[]
+    rmseRegular =[]
+    for item in lsLearning:
+        algo = SVD(verbose=True, lr_all= item, n_epochs = 5)
+        algo.fit(trainset)
+        predictions = algo.test(testset)
+        rmseLearning.append((item, accuracy.rmse(predictions, verbose=True)))
+    lsRegular =[0.7, 0.5, 0.4, 0.6, 0.4, 0.03, 0.01, 0.02]
+    for item in lsRegular:
+        algo = SVD(verbose=True, reg_all= item,  n_epochs = 5)
+        algo.fit(trainset)
+        predictions = algo.test(testset)
+        rmseRegular.append((item, accuracy.rmse(predictions, verbose=True)))
+    return rmseLearning , rmseRegular
+    
+l, r = tuning(data)
+l
+r
+lnew = list(map(lambda x: x[1] , l ))
+lnew
+rnew = list(map(lambda x: x[1] , r ))
+rnew
+dic
+dic['param_lr_all']= lnew
+dic['param_reg_all']= rnew
+dic['lr_rmse']= list(map(lambda x: x[0], l))
+dic['reg_rmse']= list(map(lambda x: x[0], r))
+ana=pd.DataFrame.from_dict(dic)
+sns.pointplot(x="param_lr_all", y="lr_rmse",   
+              data=ana,   
+              markers="d", scale=.75, ci=None)
+sns.pointplot(x="lr_rmse", y="param_lr_all",   
+              data=ana,   
+              markers="d", scale=.75, ci=None)
+f, ax = plt.subplots()
+sns.pointplot(x="lr_rmse", y="param_lr_all",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Learning rate")
+figure = f.get_figure()    
+figure.savefig('stat_cf.png', dpi=400)
+figure = svm.get_figure()    
+figure.savefig('svm_conf.png', dpi=400)
+sns.pointplot(x="lr_rmse", y="param_lr_all",   
+              data=ana,   
+              markers="d",  ci=None)
+f, ax = plt.subplots()
+sns.pointplot(x="lr_rmse", y="param_lr_all",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Learning rate")
+f.savefig('statq.png', dpi=400)
+f, ax = plt.subplots()
+sns.pointplot(x="reg_rmse", y="param_reg_all",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Regularization")
+f.savefig('statq2.png', dpi=400)
+f, ax = plt.subplots()
+sns.pointplot(x="lr_rmse", y="param_n_epochs",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Regularization")
+f.savefig('statq3.png', dpi=400)
+f, ax = plt.subplots()
+sns.pointplot(x="param_reg_all", y="param_n_epochs",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Regularization")
+f.savefig('statq2.png', dpi=400)
+f, ax = plt.subplots()
+sns.pointplot(x="param_n_epochs", y="param_reg_all",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Regularization")
+f.savefig('statq2.png', dpi=400)
+f, ax = plt.subplots()
+sns.pointplot(x="param_n_epochs", y="param_reg_all",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("No of epochs")
+f.savefig('statq3.png', dpi=400)
+f, ax = plt.subplots()
+sns.pointplot(x="reg_rmse", y="param_reg_all",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Regularization")
+f.savefig('statq2.png', dpi=400)
+model
+pred, alg= svd_my(model)
+pred
+type(pred)
+len(pred)
+check_system(9, 10, model, movies['data'], alg)
+s =check_system(9, 10, model, movies['data'], alg)
+type(s)
+df.hist(column='rating')
+df.hist(column='est')
+s =check_system(9, 10, model, movies['data'], alg)
+s.hist(column='est')
+s.hist(column='rating')
+s =predicted_top_n(9, 10, model, movies['data'], alg)
+s
+s =check_system(11838, None, model, movies['data'], alg)
+s
+s.hist(column='rating')
+s.hist(column='est')
+s.describe()
+model
+df =model[['movieId', 'userId', 'rating']]
+df
+df['movieId'].unique
+lsDF =[]
+for item in df['movieId'].unique:
+    s = check_system(item, 10, model, movies['data'], alg)
+    lsDF.append(s)
+lsDF =[]
+for item in df['movieId']:
+    s = check_system(item, 10, model, movies['data'], alg)
+    lsDF.append(s)
+    
+s
+result = pd.concat([s,s,s,s,s,s])
+result.hist(column='rating')
+result.hist(column='est')
+df['movieId']
+newdf=df['movieId'].head(1000)
+lsDF =[]
+for item in newdf:
+    s = check_system(item, 10, model, movies['data'], alg)
+    lsDF.append(s)
+    
+lsDF
+result = pd.concat(lsDF)
+result.hist(column='est')
+result.hist(column='rating')
+newdf, testdf=train_test_split(df['movieId'], test_size = .6)
+newdf, testdf=train_test_split(df, test_size = .6)
+df
+newdf, testdf=train_test_split(df, test_size = .6)
+newdf, testdf=train_test_split(model, test_size = .6)
+newdf, testdf=train_test_split(movie['userItem'], test_size = .6)
+newdf, testdf=train_test_split(movies['userItem'], test_size = .6)
+newdf, testdf=train_test_split(movies['itemUser'], test_size = .6)
+from sklearn.model_selection import train_test_split
+newdf, testdf=train_test_split(movies['itemUser'], test_size = .6)
+newdf, testdf=train_test_split(df, test_size = .6)
+newdf.describe
+lsDF =[]
+for item in newdf['movieId']:
+    s = check_system(item, 10, newdf, movies['data'], alg)
+    lsDF.append(s)
+    
+result = pd.concat(lsDF)
+bins = np.linspace(-10, 10, 30)
+plt.hist([result['est'], result['rating']], bins, label=['Predicted value', 'Imputed value'])
+plt.legend(loc='upper right')
+plt.show()
+plt.hist([result['est'], result['rating']], label=['Predicted value', 'Imputed value'])
+plt.legend(loc='upper right')
+plt.show()
+plt.asavefig('svd_final')
+boxplot(result['est'])
+sns.boxplot(result['est'])
+
+f, ax = plt.subplots()
+sns.boxplot(result['est'])
+f, ax = plt.subplots()
+sns.boxplot(result['est'] )
+ax.set_ylabel("")
+ax.set_xlabel("")
+f.savefig('svd_boxplot_est.png', dpi=400)
+f, ax = plt.subplots()
+sns.boxplot(result['rating'] )
+ax.set_ylabel("")
+ax.set_xlabel("")
+f.savefig('svd_boxplot_est.png', dpi=400)
+f, ax = plt.subplots()
+sns.boxplot(result['rating'] )
+ax.set_ylabel("")
+ax.set_xlabel("")
+f.savefig('svd_boxplot_actual.png', dpi=400)
+f, ax = plt.subplots()
+sns.boxplot(result['est'] )
+ax.set_ylabel("")
+ax.set_xlabel("")
+f.savefig('svd_boxplot_est.png', dpi=400)
+summary(result['est'])
+result['est'].describe()
+result['rating'].describe()
+tf = TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0, stop_words='english')
+tfidf_matrix = tf.fit_transform(list(movies['data'][['tagline_mod', 'weighted_rating', 'genres_mod', 'production_countries']]))
+tfidf_matrix.shape
+cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+cosine_sim[:4, :4]
+sim_scores = list(enumerate(cosine_sim[idx]))
+max(movies['data']['weighted_rating'])
+movies['data'][movies['data']['weighted_rating'] =max(movies['data']['weighted_rating'])]
+movies['data'][movies['data']['weighted_rating'] ==max(movies['data']['weighted_rating'])]
+top =movies['data'][movies['data']['weighted_rating'] ==max(movies['data']['weighted_rating'])]
+top['id']
+sim_scores = list(enumerate(cosine_sim[19404]))
+top
+movies['data']
+tf =list(movies['data'][['tagline_mod', 'weighted_rating', 'genres_mod', 'production_countries']])
+tf =list(movies['data']['tagline_mod', 'weighted_rating', 'genres_mod', 'production_countries'])
+tf =list(movies['data']['tagline_mod'])
+tf
+movies['data']['bag_of_words'] = movies['data']['tagline_mod'].map(str) + movies['data']['genres_mod'].map(str) +movies['data']['production_countries'].map(str)
+movies['data']['bag_of_words']
+movies['data']['bag_of_words'].iloc[0]
+     tf = TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0, stop_words='english')
+
+     tfidf_matrix = tf.fit_transform(list(movies['data']['bag_of_words']))
+tfidf_matrix.shape
+sim_scores = list(enumerate(cosine_sim[19404]))
+cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+tfidf_matrix
+tfidf_matrix.shape
+tfidf_matrix = tf.fit_transform(list(movies['data']['genre_mod']))
+tfidf_matrix = tf.fit_transform(list(movies['data']['genres_mod']))
+tfidf_matrix.shape
+cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+tfidf_matrix.shape
+                 else:
+                    new_item+=item[:-4]+'|'
+             mov_genres.append(new_item)
+             count_row.append(counts)
+runfile('C:/Users/Gordana/ML_Movie_RS/data.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+df_movies2009.columns
+debugfile('C:/Users/Gordana/ML_Movie_RS/data.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+qualified = movies['data'].sort_values('weighted_rating', ascending=False).head(20)
+
+qualified.head(10)
+df_movies2009['rated']
+movies['data'].columns
+from surprise.model_selection import GridSearchCV, KFold, train_test_split
+from sklearn.model_selection import KFold
+kf = KFold(n_splits=5)
+print(kf)
+min(movies['data'].shape)
+min(R_demeaned.shape)
+python -m pip install -U pip
+pip install -U pip
+pip install -U matplotlib
+kf = KFold(n_splits=2)
+for trainset, testset in kf.split(movies['item_ids']):
+    trainset.shape
+    testset.shape
+    
+trainset
+trainset.shape
+testset.shape
+testset.head()
+from surprise import Reader, Dataset,
+from surprise import Reader, Dataset
+import surpise
+for train_index, test_index in kf.split(movies['item_ids']):
+    X_train, X_test = movies['item_ids'].iloc[train_index,:], movies['item_ids'].iloc[test_index,:]
+    
+kf = KFold(n_splits=6)
+for train_index, test_index in kf.split(movies['item_ids']):
+    X_train, X_test = movies['item_ids'].iloc[train_index,:]
+    , movies['item_ids'].iloc[test_index,:]
+    
+kf
+trainset, testset in  train_test_split(df_ratings2009, test_size=0.2)
+trainset, testset=train_test_split(df_ratings2009, test_size=0.2)
+trainset.shape
+testset.shape
+trainset.iloc[5]
+testset.iloc[6]
+trainset, testset=train_test_split(df_ratings2009, test_size=0.2)
+testset.iloc[6]
+testset.shape
+trainset.iloc[5]
+trainset.shape
+from surprise.model_selection import cross_validate
+import suprise
+from surprise.model_selection import cross_validate
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/similarites_Collorative.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/similarites_Collorative.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+df_ratings[X_test].flatten()
+df_ratings[X_test]
+df_ratings[X_test.id]
+df_ratings[X_test.movieId]
+s =df_ratings[X_test.movieId]
+s.shape
+s =df_ratings[X_test.userId]
+s.shape
+predictions_df.shape
+preds_df
+preds_df[R_df.userId]
+preds_df[R_demeaned.userId]
+preds_df[R_demeaned]
+preds_df[R_demeaned].flatten()
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+preds_df
+preds_df.columns
+preds_df.shape
+test_df= X_test.pivot(index = 'userId', columns ='movieId', values = 'rating').fillna(0)
+test_df[preds_df]
+test_df[preds_df.userId]
+test_df.shape
+preds_df.shape
+preds_df.columns
+test_df.columns
+test_df[preds_df.movieId]
+test_df[preds_df.iloc[0]]
+res =test_df[preds_df.iloc[0]]
+import seaborn as sns
+import matplotlib as mpl
+import matplotlib 
+
+## ---(Fri Dec 27 01:15:00 2019)---
+import matplotlib
+import seaborn as sns
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+
+sns.distplot(movies['item_ids']['rating'])
+plt.title('Rating Distribution (all users)')
+
+## ---(Fri Dec 27 13:12:38 2019)---
+from surprise import Reader, Dataset, SVD, evaluate, accuracy
+from surprise import Reader, Dataset, SVD, evaluate, accuracy
+from surprise.model_selection import GridSearchCV, KFold, train_test_split
+from surprise.model_selection.validation import cross_validate
+from surprise.prediction_algorithms.matrix_factorization import SVDpp
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+movies['item_ids'].rating
+movies['item_ids'].rating.max
+max(movies['item_ids'].rating)
+min(movies['item_ids'].rating)
+ls=movies['item_ids'].rating
+ls=list(movies['item_ids'].rating)
+ls=list(movies['item_ids'].rating.unique)
+ls
+ls.unique
+set(ls)
+m =list(set(ls))
+Reader(m)
+(1,5)
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+model_coll
+Dataset.load_builtin(model_coll.ratings)
+Dataset.load_builtin(model_coll.modelRatings)
+model_coll.modelRatings[['userId', 'movieId', 'rating']]
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+from itertools import permutations
+lsLearning =[0.001, 0.005, 0.004, 0.003,0.002]
+lsFactor = [100, 14, 20 ,50, 80]
+lsRegular =[0.02, 0.01, 0.04, 0.03, 0.02 ]
+permutations(list(zip(lsLearning, lsFactor)), 2)
+perm = list(permutations(list(zip(lsLearning, lsFactor)), 2))
+perm[0]
+perm = list(permutations(list(zip(lsLearning, lsFactor)), 1))
+perm[0]
+perm[2]
+zip(perm, lsRegular)
+tr=list(zip(perm, lsRegular))
+tr[0]
+perm = list(permutations(list(zip(lsLearning, lsFactor))))
+perm[0]
+perm[1]
+zip(perm, lsRegular, perm)
+tr
+perm = list(permutation(zip(lsLearning, lsFactor,  lsRegular)))
+perm = list(permutations(zip(lsLearning, lsFactor,  lsRegular)))
+perm[0]
+len(perm)
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+plot
+plt.scatter(plot[1], plot[3])
+plt.show()
+import matplotlib.pyplot as plt
+plt.scatter(plot[1], plot[3])
+
+plt.show()
+plt.scatter(plot[1], plot[3])
+plt.set_xlabel(r'Avg. RMSE', fontsize=15)
+plt.set_ylabel(r'No of factors', fontsize=15)
+plt.show()
+plt.scatter(plot[1], plot[3]. 'x')
+plt.xlabel(r'Avg. RMSE', fontsize=15)
+plt.ylabel(r'No of factors', fontsize=15)
+plt.show()
+plt.scatter(plot[1], plot[3], 'x')
+plt.xlabel(r'Avg. RMSE', fontsize=15)
+plt.ylabel(r'No of factors', fontsize=15)
+plt.show()
+plt.scatter(plot[1], plot[3])
+plt.xlabel(r'Avg. RMSE', fontsize=15)
+plt.ylabel(r'No of factors', fontsize=15)
+plt.show()
+plt.scatter(plot[1], plot[3])
+plt.ylabel(r'Avg. RMSE')
+plt.xlabel(r'No of factors')
+plt.show()
+plot
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/similarites_Collorative.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+permutations(zip(lsLearning, lsRegular))
+perm =permutations(zip(lsLearning, lsRegular))
+list(perm)
+list(perm)[0]
+list(perm)
+runfile('C:/Users/Gordana/ML_Movie_RS/similarites_Collorative.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+plot
+runfile('C:/Users/Gordana/ML_Movie_RS/similarites_Collorative.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+plot
+kf = KFold(n_splits=5)
+trainset, testset =kf.split(data):
+    
+    
+trainset, testset =kf.split(data)
+trainset, testset =kf.split(model_coll.modelRatings)
+reader =Reader(rating_scale=(1, 5))
+data = Dataset.load_from_df(model_coll.modelRatings[['userId', 'movieId', 'rating']], reader)
+trainset, testset =kf.split(data)
+trainset, testset =split(data)
+m = kf.split(data)
+trainset, testset =m[0]
+m
+m = list(kf.split(data))
+m
+len(m)
+wtf = list(kf.split(data))
+len(wtf)
+wtf[0]
+len(wtf[0])
+len(wtf[1])
+len(wtf[1][1])
+len(wtf[1][0])
+trainset, testset = train_test_split(data, test_size=.25)
+# We'll use the famous SVD algorithm.
+algo = SVD()
+
+# Train the algorithm on the trainset, and predict ratings for the testset
+algo.fit(trainset)
+predictions = algo.test(testset)
+
+# Then compute RMSE
+accuracy.rmse(predictions)
+trainset.shape
+model_coll.modelRatings['rating'].value_counts()
+
+alt_ratings = four_star
+model_coll.modelRatings['rating'].value_counts()
+trainset, testset = train_test_split(data, test_size=.25)
+trainset.shape
+testset.shape
+testset
+trainset.head()
+trainset
+algo.fit(trainset)
+
+sns.distplot(movie['item_ids']['rating'])
+plt.title('Rating Distribution (all users)')
+import seaborn as sns
+
+sns.distplot(movie['item_ids']['rating'])
+plt.title('Rating Distribution (all users)')
+
+sns.distplot(movies['item_ids']['rating'])
+plt.title('Rating Distribution (all users)')
+predictions = algo.test(testset)
+
+# Compute and print Root Mean Squared Error
+accuracy.rmse(predictions, verbose=True)
+runfile('C:/Users/Gordana/ML_Movie_RS/data.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+movies['item_ids']['rating'].value_counts()
+df_ratings=movies['item_ids']
+df_ratings['rating'] = df_ratings['rating'].apply( lambda x: x+0.7 if x>1.0 else x )
+df_ratings['rating'].value_counts()
+df_ratings['rating'] = df_ratings['rating'].apply( lambda x: x+1 if x>1.0 else x )
+df_ratings['rating'].value_counts()
+runfile('C:/Users/Gordana/ML_Movie_RS/data.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+movies['item_ids']['rating'].value_counts()
+
+sns.distplot(movie['item_ids']['rating'])
+plt.title('Rating Distribution (all users)')
+
+sns.distplot(movies['item_ids']['rating'])
+plt.title('Rating Distribution (all users)')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+def check_system(Id,movieId,limit,df,userId='userId',algo):
+    '''
+    This function checks the predicted rating against ratings made by the user
+    And takes in an int UserId (Id)
+    an int limit (the number of movies returned)
+    dataframe columns necessary (movieId, userId)
+    a dataframe of ratings (df)
+    an algorithm (algo)
+    '''
+    # Isolates necessary columns from the dataframe
+    df = df[[movieId,userId,'rating']]
+    
+    # Takes a subsample of the user's ratings
+    user_df = df[df['userId'] == Id]
+    if user_df.shape[0] >= df[userId].value_counts().mean():
+        user_df = user_df.sample(frac=.10)
+    else:
+        user_df = user_df.sample(frac=.50)
+
+    # Builds the dataframe to be returned     
+    user_df['est'] = user_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    user_df['error'] = user_df['est']-user_df['rating']
+    user_df['avg_error'] = user_df['error'].mean()
+    
+    # Returns a dataframe dependent on what the limit is set to
+    if limit == None:
+        user_df = pd.merge(user_df,movies_df,on=movieId)
+        return user_df[[userId,movieId,'title','rating','est','error','avg_error']]
+    else:
+        if limit >= user_df.shape[0]:
+            user_df = pd.merge(user_df,movies_df,on=movieId)
+            return user_df[[userId,movieId,'title','rating','est','error','avg_error']]
+        else:
+            user_df = user_df.head(limit)
+            user_df = pd.merge(user_df,movies_df,on=movieId)
+            return user_df[[userId,movieId,'title','rating','est','error','avg_error']]
+def check_system(Id,movieId='movieId',limit,df,userId='userId',algo):
+    '''
+    This function checks the predicted rating against ratings made by the user
+    And takes in an int UserId (Id)
+    an int limit (the number of movies returned)
+    dataframe columns necessary (movieId, userId)
+    a dataframe of ratings (df)
+    an algorithm (algo)
+    '''
+    # Isolates necessary columns from the dataframe
+    df = df[[movieId,userId,'rating']]
+    
+    # Takes a subsample of the user's ratings
+    user_df = df[df['userId'] == Id]
+    if user_df.shape[0] >= df[userId].value_counts().mean():
+        user_df = user_df.sample(frac=.10)
+    else:
+        user_df = user_df.sample(frac=.50)
+
+    # Builds the dataframe to be returned     
+    user_df['est'] = user_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    user_df['error'] = user_df['est']-user_df['rating']
+    user_df['avg_error'] = user_df['error'].mean()
+    
+    # Returns a dataframe dependent on what the limit is set to
+    if limit == None:
+        user_df = pd.merge(user_df,movies_df,on=movieId)
+        return user_df[[userId,movieId,'title','rating','est','error','avg_error']]
+    else:
+        if limit >= user_df.shape[0]:
+            user_df = pd.merge(user_df,movies_df,on=movieId)
+            return user_df[[userId,movieId,'title','rating','est','error','avg_error']]
+        else:
+            user_df = user_df.head(limit)
+            user_df = pd.merge(user_df,movies_df,on=movieId)
+            return user_df[[userId,movieId,'title','rating','est','error','avg_error']]
+df = movies['itemUser'][['movieId','userId','rating']]
+
+user_df = df[df['userId'] == 118250]
+user_df.shape[0]
+user_df.shape
+user_df = df[df['userId'] == 11838]
+user_df.shape
+df[userId].value_counts().mean()
+df['userId'].value_counts().mean()
+user_df = user_df.sample(frac=.10)
+user_df.shape
+user_df['est'] = user_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+user_df['est'] = user_df['movieId'].apply(lambda x: round(algo.predict(11838,x).est,2))
+user_df['error'] = user_df['est']-user_df['rating']
+user_df['avg_error'] = user_df['error'].mean()
+user_df = user_df.head(5)
+user_df = pd.merge(user_df,movies['data'],left_on='movieId', right_on='id')
+user_df[[userId,movieId,'title','rating','est','error','avg_error']]
+user_df[['userId','movieId','title','rating','est','error','avg_error']]
+user_df = user_df.head(5)
+user_df.shape
+algo
+user_df['est'] = user_df['movieId'].apply(lambda x: round(alg.predict(Id,x).est,2))
+def check_system(Id,limit,df,movies,algo):
+
+    # Isolates necessary columns from the dataframe
+    df = df[['movieId','userId','rating']]
+    
+    # Takes a subsample of the user's ratings
+    user_df = df[df['userId'] == Id]
+    if user_df.shape[0] >= df['userId'].value_counts().mean():
+        user_df = user_df.sample(frac=.10)
+    else:
+        user_df = user_df.sample(frac=.50)
+
+    # Builds the dataframe to be returned     
+    user_df['est'] = user_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    user_df['error'] = user_df['est']-user_df['rating']
+    user_df['avg_error'] = user_df['error'].mean()
+    
+    # Returns a dataframe dependent on what the limit is set to
+    if limit == None:
+        user_df = pd.merge(user_df,movies,left_on='movieId', right_on='id')
+        return user_df[['userId','movieId','title','rating','est','error','avg_error']]
+    else:
+        if limit >= user_df.shape[0]:
+            user_df = pd.merge(user_df,movies,left_on='movieId', right_on='id')
+            return user_df[['userId','movieId','title','rating','est','error','avg_error']]
+        else:
+            user_df = user_df.head(limit)
+            user_df = pd.merge(user_df,movies,left_on='movieId', right_on='id')
+            return user_df[['userId','movieId','title','rating','est','error','avg_error']]
+            
+check_system( 11838, 3, movies['itemUser'], movies['data'], alg)
+check_system( 11838, None, movies['itemUser'], movies['data'], alg)
+check_system( 11839, None, movies['itemUser'], movies['data'], alg)
+find_user = movies['itemUser'].copy()
+find_user['count'] = 1
+find_user = find_user.groupby('userId').sum()
+find_user
+max(find_user['count'])
+find_user[find_user['count'] == 144].head(1)
+check_system( 581, 10, movies['itemUser'], movies['data'], alg)
+find_user[find_user['count'] == 590].head(1)
+find_user[find_user['count'] == 9279].head(1)
+check_system( 8659, 10, movies['itemUser'], movies['data'], alg)
+find_user[find_user['count'] == 35].head(1)
+check_system( 54, 10, movies['itemUser'], movies['data'], alg)
+movie_choices = df['movieId'].unique()
+temp_df = df[df['userId'] == 8659]
+watched_movs = temp_df['movieId'].unique()
+watched_movs.shape
+movie_choices.shape
+unwatched = np.setdiff1d(movie_choices,watched_movs)
+unwatched.shape
+def predicted_top_n(Id, n, df, movies, algo):
+    '''
+    This function returns n movies, sorted by predicted user rating, from a random sample of movies. 
+    '''
+    df = df[['movieId','userId','rating']]
+
+    movie_choices = df['movieId'].unique()
+    
+    # Take out movies the user has already watched
+    temp_df = df[df['userId'] == Id]
+    watched_movs = temp_df['movieId'].unique()
+    unwatched = np.setdiff1d(movie_choices,watched_movs)
+    movies = unwatched
+        
+    # Build the dataframe that we'll return
+    predicted_df = pd.DataFrame()
+    predicted_df['movieId'] = movies
+    predicted_df['userId'] = Id
+    predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    predicted_df = predicted_df.sort_values(by='est', ascending=False)
+    predicted_df = predicted_df.head(n)
+    predicted_df = pd.merge(predicted_df,'movies_df',left_on='movieId', right_on ='id')
+    return predicted_df[['userId','title','est']]
+    
+predicted_top_n(8659, 10, movies['itemUser'], movies['data'], alg)
+def predicted_top_n(Id, n, df, movies, algo):
+    '''
+    This function returns n movies, sorted by predicted user rating, from a random sample of movies. 
+    '''
+    df = df[['movieId','userId','rating']]
+
+    movie_choices = df['movieId'].unique()
+    
+    # Take out movies the user has already watched
+    temp_df = df[df['userId'] == Id]
+    watched_movs = temp_df['movieId'].unique()
+    unwatched = np.setdiff1d(movie_choices,watched_movs)
+    movies = unwatched
+        
+    # Build the dataframe that we'll return
+    predicted_df = pd.DataFrame()
+    predicted_df['movieId'] = movies
+    predicted_df['userId'] = Id
+    predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    predicted_df = predicted_df.sort_values(by='est', ascending=False)
+    predicted_df = predicted_df.head(n)
+    predicted_df = pd.merge(predicted_df,movies ,left_on='movieId', right_on ='id')
+    return predicted_df[['userId','title','est']]
+    
+predicted_top_n(8659, 10, movies['itemUser'], movies['data'], alg)
+movies = unwatched
+predicted_df = pd.DataFrame()
+predicted_df['movieId'] = movies
+predicted_df['userId'] = 8659
+predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(alg.predict(Id,x).est,2))
+predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(alg.predict(8659,x).est,2))
+predicted_df = predicted_df.head(2)
+predicted_df = predicted_df.shape
+predicted_df.shape
+predicted_df
+predicted_df = pd.DataFrame()
+predicted_df['movieId'] = movies
+predicted_df['userId'] = 8659
+predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(alg.predict(8659,x).est,2))
+predicted_df.shape
+predicted_df = predicted_df.head(5)
+predicted_df.shape
+predicted_df.desc
+predicted_df.iloc[0]
+predicted_df = pd.merge(predicted_df,movies['data'] ,left_on='movieId', right_on ='id')
+predicted_df.iloc[0]
+predicted_df.type
+type(predicted_df)
+new = pd.merge(predicted_df,movies['data'] ,left_on='movieId', right_on ='id')
+predicted_df['movieId']
+movies['data']['id']
+movies['data']
+movies
+movies = load_dataset()
+new = pd.merge(predicted_df,movies['data'] ,left_on='movieId', right_on ='id')
+new[['userId','title','est']]
+predicted_df
+find_user
+runfile('C:/Users/Gordana/ML_Movie_RS/data.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+movies = load_dataset()
+runfile('C:/Users/Gordana/ML_Movie_RS/data.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+movies = load_dataset()
+movies['data'].shape
+movies['data']['release_date']
+find_user
+mean(find_user['count'])
+min(find_user['count'])
+max(find_user['count'])
+avg(find_user['count'])
+find_user['count'].mean()
+find_user[find_user['count'] == 92].head(1)
+def predicted_top_n(Id, n, df, movies, algo):
+    '''
+    This function returns n movies, sorted by predicted user rating, from a random sample of movies. 
+    '''
+    df = df[['movieId','userId','rating']]
+
+    movie_choices = df['movieId'].unique()
+    
+    # Take out movies the user has already watched
+    temp_df = df[df['userId'] == Id]
+    watched_movs = temp_df['movieId'].unique()
+    unwatched = np.setdiff1d(movie_choices,watched_movs)
+    movies = unwatched
+        
+    # Build the dataframe that we'll return
+    predicted_df = pd.DataFrame()
+    predicted_df['movieId'] = movies
+    predicted_df['userId'] = Id
+    predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    predicted_df = predicted_df.sort_values(by='est', ascending=False)
+    predicted_df = predicted_df.head(n)
+    predicted_df = pd.merge(predicted_df,movies ,left_on='movieId', right_on ='id')
+    return predicted_df[['userId','title','est']]
+    
+predicted_top_n(873, 10, movies['itemUser'], movies['data'])
+predicted_top_n(873, 10, movies['itemUser'], movies['data'], alg)
+check_system(873, 10, movies['itemUser'], movies['data'], alg)
+check_system(873, None, movies['itemUser'], movies['data'], alg)
+model = movies['itemUser']
+model = model[model['userId'] == 118205]
+model
+model = model[model['userId'] == 118205]
+model = movies['itemUser']
+max(movies['data']['weighted_rating'])
+famos=movies['data'][movies['data']['weighted_rating']>8.0]
+famos
+famos.head(5)
+famos['id'].head(5)
+famos['title','id'].head(5)
+famos[['title','id']].head(5)
+model = model[model['movieId'] == 101]
+model = movies['itemUser']
+accLeon = model[model['movieId'] == 101]
+accLeon
+acc=find_user[find_user['movieId']=101]
+acc=find_user[find_user['movieId']==101]
+acc
+find_user
+acc=find_user[find_user['movieId']==101]
+acc
+accLeon = model[model['movieId'] == 101]
+accLeon
+find_user= model.copy()
+find_user['count'] = 1
+find_user = find_user.groupby('userId').sum()
+acc=find_user[find_user['movieId']==101]
+acc
+find_user
+acc=find_user[find_user['movieId']==103]
+acc
+acc=find_user[find_user['movieId']=101]
+acc=find_user[find_user['movieId']==101]
+acc
+accLeon = model[model['movieId'] == 101]
+accLeon
+sl =accLeon.groupby('userId')
+sl
+sl.shape
+sl =accLeon['userId'].unique
+sl 
+accLeon = model[model['movieId'] == 101]
+accLeon
+check_system(13488, 10, movies['itemUser'], movies['data'], alg)
+check_system(32, 10, movies['itemUser'], movies['data'], alg)
+check_system(13566, 10, movies['itemUser'], movies['data'], alg)
+check_system(13566, None, movies['itemUser'], movies['data'], alg)
+predicted_top_n(13488, 10, movies['itemUser'], movies['data'], alg)
+df = model[['movieId','userId','rating']]
+ovie_choices = df['movieId'].unique()
+movie_choices = df['movieId'].unique()
+temp_df = df[df['userId'] == 13488]
+watched_movs = temp_df['movieId'].unique()
+watched_movs.shape
+unwatched = np.setdiff1d(movie_choices,watched_movs)
+movies = unwatched
+def predicted_top_n(Id, n, df, movies_df, algo):
+    '''
+    This function returns n movies, sorted by predicted user rating, from a random sample of movies. 
+    '''
+    df = df[['movieId','userId','rating']]
+
+    movie_choices = df['movieId'].unique()
+    
+    # Take out movies the user has already watched
+    temp_df = df[df['userId'] == Id]
+    watched_movs = temp_df['movieId'].unique()
+    unwatched = np.setdiff1d(movie_choices,watched_movs)
+    movies = unwatched
+        
+    # Build the dataframe that we'll return
+    predicted_df = pd.DataFrame()
+    predicted_df['movieId'] = movies_df
+    predicted_df['userId'] = Id
+    predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    predicted_df = predicted_df.sort_values(by='est', ascending=False)
+    predicted_df = predicted_df.head(n)
+    predicted_df = pd.merge(predicted_df,movies ,left_on='movieId', right_on ='id')
+    return predicted_df[['userId','title','est']]
+    
+predicted_top_n(13488, 10, movies['itemUser'], movies['data'], alg)
+movies['data']
+movies = load_dataset()
+predicted_top_n(13488, 10, movies['itemUser'], movies['data'], alg)
+movies['data']
+def predicted_top_n(Id, n, df, movies_df, algo):
+    '''
+    This function returns n movies, sorted by predicted user rating, from a random sample of movies. 
+    '''
+    df = df[['movieId','userId','rating']]
+
+    movie_choices = df['movieId'].unique()
+    
+    # Take out movies the user has already watched
+    temp_df = df[df['userId'] == Id]
+    watched_movs = temp_df['movieId'].unique()
+    unwatched = np.setdiff1d(movie_choices,watched_movs)
+    movies = unwatched
+        
+    # Build the dataframe that we'll return
+    predicted_df = pd.DataFrame()
+    predicted_df['movieId'] = movies
+    predicted_df['userId'] = Id
+    predicted_df['est'] = predicted_df['movieId'].apply(lambda x: round(algo.predict(Id,x).est,2))
+    predicted_df = predicted_df.sort_values(by='est', ascending=False)
+    predicted_df = predicted_df.head(n)
+    predicted_df = pd.merge(predicted_df,movies_df ,left_on='movieId', right_on ='id')
+    return predicted_df[['userId','title','est']]
+    
+predicted_top_n(13488, 10, movies['itemUser'], movies['data'], alg)
+movies['data'].sort_values(by='weighted_rating' , ascending = False)
+movies['data'].sort_values(by='weighted_rating' , ascending = False).head(10)
+movies['data'].sort_values(by='weighted_rating' , ascending = False)[['titile', 'vote_average', 'vote_count', 'weighted_rating']].head(10)
+movies['data'].sort_values(by='weighted_rating' , ascending = False)[['title', 'vote_average', 'vote_count', 'weighted_rating']].head(10)
+disply(movies['data'].sort_values(by='weighted_rating' , ascending = False)[['title', 'vote_average', 'vote_count', 'weighted_rating']].head(10))
+display(movies['data'].sort_values(by='weighted_rating' , ascending = False)[['title', 'vote_average', 'vote_count', 'weighted_rating']].head(10))
+display_html(movies['data'].sort_values(by='weighted_rating' , ascending = False)[['title', 'vote_average', 'vote_count', 'weighted_rating']].head(10))
+scatter_matrix(movies['data'].sort_values(by='weighted_rating' , ascending = False)[['title', 'vote_average', 'vote_count', 'weighted_rating']].head(10), alpha=0.2)
+pd.plotting.scatter_matrix(movies['data'].sort_values(by='weighted_rating' , ascending = False)[['title', 'vote_average', 'vote_count', 'weighted_rating']].head(10), alpha=0.2)
+movies['data']
+movies['data'].columns
+sns.scatterplot(x='vote_average', y='weighted_rating',data=movies['data'])
+plt.title('Transformed Weighted Ratings vs. Vote Average')
+plt.xlabel('Vote Average')
+plt.ylabel('Weighted Rating')
+plt.savefig('wr-vs-va')
+plt.show()plt.savefig('wr-vs-va.png')
+plt.show()
+C:\Users\Gordana\ML_Movie_RS
+plt.savefig('wr-vs-va')
+sns.scatterplot(x='vote_average', y='weighted_rating',data=movies['data'])
+plt.title('Transformed Weighted Ratings vs. Vote Average')
+plt.xlabel('Vote Average')
+plt.ylabel('Weighted Rating')
+plt.savefig('wr-vs-va.png')
+sns.scatterplot(x='vote_average', y='weighted_rating',data=movies['data'])
+plt.title('Transformed Weighted Ratings vs. Vote Average')
+plt.xlabel('Vote Average')
+plt.ylabel('Weighted Rating')   
+svm =sns.scatterplot(x='vote_average', y='weighted_rating',data=movies['data'])
+plt.title('Transformed Weighted Ratings vs. Vote Average')
+plt.xlabel('Vote Average')
+plt.ylabel('Weighted Rating')
+svm.savefig('wr-va.png')
+figure = svm.get_figure()    
+figure.savefig('svm_conf.png', dpi=400)
+param_grid = {'n_epochs': [5, 10], 'lr_all': [0.002, 0.005],
+              'reg_all': [0.4, 0.6]}
+grid_search = GridSearch(SVD, param_grid, measures=['RMSE', 'FCP'])
+import sklearn.model_selection
+from  sklearn.model_selection import GridSearchCV
+from  sklearn.model_selection import GridSearch
+grid_search = GridSearch(SVD, param_grid, measures=['RMSE', 'FCP'])
+grid_search = GridSearchCV(SVD, param_grid, measures=['RMSE', 'FCP'])
+grid_search = GridSearchCV(SVD, param_grid)
+data
+grid_search.evaluate(data)
+data.folds
+data.folds()
+param_grid = {'n_epochs': [5, 10], 'lr_all': [0.002, 0.005],
+              'reg_all': [0.4, 0.6]}
+grid_search = GridSearchCV(SVD, param_grid)
+grid_search.fit()
+trainset, testset = train_test_split(data, test_size=.2)
+data
+data.iloc[0]
+reader = Reader(rating_scale=(1, 5))
+start = time.time()
+algo = SVD(verbose=True)
+data = Dataset.load_from_df(model[['userId', 'movieId', 'rating']], reader)
+trainset, testset = train_test_split(data, test_size=.25)
+reader = Reader(rating_scale=(1, 5))
+start = time.time()
+algo = SVD(verbose=True)
+data = Dataset.load_from_df(model[['userId', 'movieId', 'rating']], reader)
+trainset, testset = train_test_split(model, test_size=.25)
+data= Dataset.load_from_df(trainset[['userId', 'movieId', 'rating']], reader)
+param_grid = {'n_epochs': [5, 10], 'lr_all': [0.002, 0.005],
+              'reg_all': [0.4, 0.6]}
+grid_search = GridSearchCV(SVD, param_grid)
+grid_search.fit(data)
+grid_search = GridSearchCV(SVD, param_grid, scoring ='RMSE')
+grid_search.fit(data)
+grid_search = GridSearchCV(SVD, param_grid, scoring =None)
+grid_search.fit(data)
+s = [0.002, 0.005]
+type(s)
+def  tuning (train, test):
+    lsLearning =[0.001, 0.005, 0.004, 0.003,0.002]
+    data = Dataset.load_from_df(train[['userId', 'movieId', 'rating']], reader)
+    rmseLearning =[]
+    rmseRegular =[]
+    for item in lsLearning:
+        algo = SVD(verbose=True, lr_all= item)
+        algo.fit(train)
+        predictions = algo.test(test)
+        rmseLearning.append((item, accuracy.rmse(predictions, verbose=True)))
+    lsRegular =[0.02, 0.01, 0.04, 0.03, 0.02 ]
+    for item in lsRegular:
+        algo = SVD(verbose=True, reg_all= item)
+        algo.fit(train)
+        predictions = algo.test(test)
+        rmseRegular.append((item, accuracy.rmse(predictions, verbose=True)))
+    return rmseLearning , rmseRegular
+    
+def  tuning (train, test):
+    lsLearning =[0.001, 0.005, 0.004, 0.003,0.002]
+    data = Dataset.load_from_df(train[['userId', 'movieId', 'rating']], reader)
+    test =  Dataset.load_from_df(test[['userId', 'movieId', 'rating']], reader)
+    rmseLearning =[]
+    rmseRegular =[]
+    for item in lsLearning:
+        algo = SVD(verbose=True, lr_all= item)
+        algo.fit(data)
+        predictions = algo.test(test)
+        rmseLearning.append((item, accuracy.rmse(predictions, verbose=True)))
+    lsRegular =[0.02, 0.01, 0.04, 0.03, 0.02 ]
+    for item in lsRegular:
+        algo = SVD(verbose=True, reg_all= item)
+        algo.fit(data)
+        predictions = algo.test(test)
+        rmseRegular.append((item, accuracy.rmse(predictions, verbose=True)))
+    return rmseLearning , rmseRegular
+    
+transet
+trainset
+l, r = tuning(trainset, testset)
+trainset, testset = train_test_split(model, test_size=.2)
+l, r = tuning(trainset, testset)
+def  tuning (train, test):
+    reader = Reader(rating_scale=(1, 5))
+    lsLearning =[0.001, 0.005, 0.004, 0.003,0.002]
+    data = Dataset.load_from_df(train[['userId', 'movieId', 'rating']], reader)
+    test =  Dataset.load_from_df(test[['userId', 'movieId', 'rating']], reader)
+    rmseLearning =[]
+    rmseRegular =[]
+    for item in lsLearning:
+        algo = SVD(verbose=True, lr_all= item)
+        algo.fit(data)
+        predictions = algo.test(test)
+        rmseLearning.append((item, accuracy.rmse(predictions, verbose=True)))
+    lsRegular =[0.02, 0.01, 0.04, 0.03, 0.02 ]
+    for item in lsRegular:
+        algo = SVD(verbose=True, reg_all= item)
+        algo.fit(data)
+        predictions = algo.test(test)
+        rmseRegular.append((item, accuracy.rmse(predictions, verbose=True)))
+    return rmseLearning , rmseRegular
+    
+l, r = tuning(trainset, testset)
+svd_my(model)
+data = Dataset.load_from_df(trainset[['userId', 'movieId', 'rating']], reader)
+algo = SVD(verbose=True)
+algo.fit(data)
+reader = Reader(rating_scale=(1, 5))
+data = Dataset.load_from_df(trainset[['userId', 'movieId', 'rating']], reader)
+algo.fit(data)
+datas=data.build_full_trainset()
+algo.fit(datas)
+predictions = algo.test(testset)
+test =  Dataset.load_from_df(test[['userId', 'movieId', 'rating']], reader)
+test =  Dataset.load_from_df(testset[['userId', 'movieId', 'rating']], reader)
+predictions = algo.test(test)
+tests= test.build_full_trainset()
+predictions = algo.test(tests)
+from surprise.model_selection import train_test_split
+trainset, testset = train_test_split(data, test_size=.25)
+
+def  tuning (data):
+    trainset, testset = train_test_split(data, test_size=.25)
+    #reader = Reader(rating_scale=(1, 5))
+    lsLearning =[0.001, 0.005, 0.004, 0.003,0.002]
+    #data = Dataset.load_from_df(train[['userId', 'movieId', 'rating']], reader)
+    #datas = data.build_full_trainset()
+    #test =  Dataset.load_from_df(test[['userId', 'movieId', 'rating']], reader)
+    #tests= test.build_full_trainset()
+    rmseLearning =[]
+    rmseRegular =[]
+    for item in lsLearning:
+        algo = SVD(verbose=True, lr_all= item)
+        algo.fit(trainset)
+        predictions = algo.test(testset)
+        rmseLearning.append((item, accuracy.rmse(predictions, verbose=True)))
+    lsRegular =[0.02, 0.01, 0.04, 0.03, 0.02 ]
+    for item in lsRegular:
+        algo = SVD(verbose=True, reg_all= item)
+        algo.fit(trainset)
+        predictions = algo.test(testset)
+        rmseRegular.append((item, accuracy.rmse(predictions, verbose=True)))
+    return rmseLearning , rmseRegular
+    
+data
+l, r = tuning(data)
+l
+surprise.evaluate.GridSearch()
+import suprise
+import surprise
+surprise.evaluate.GridSearch()
+surprise.evaluate.evaluate(data, SVD)
+surprise.model_selection.search.GridSearchCV(algo_class, param_grid)
+surprise.model_selection.search.GridSearchCV(SVD, param_grid)
+ls = surprise.model_selection.search.GridSearchCV(SVD, param_grid)
+ls.evaluate(data)
+m =ls.fit(data)
+param_grid = { 'lr_all': [0.002, 0.005]}
+ls = surprise.model_selection.search.GridSearchCV(SVD, param_grid)
+m =ls.fit(data)
+results_df = pd.DataFrame.from_dict(m.cv_results)
+m.cv_results
+m.best_estimator
+m
+ls.best_estimator
+results_df = pd.DataFrame.from_dict(ls.cv_results)
+results_df
+ls.best_estimator[0]
+ls.best_estimator
+ls.best_estimator['rmse']
+list(ls.best_estimator['rmse'])
+ls.best_estimator['rmse']
+param_grid = {'lr_all': [0.002, 0.005, 0.003, 0.002],
+              'reg_all': [0.4, 0.6, 0.2, 0.3] , 'n_epochs': [5, 5,5,5]}
+ls = surprise.model_selection.search.GridSearchCV(SVD, param_grid)
+dat.shape
+data.shape
+data
+ls.fit(data)
+def  tuning (data):
+    trainset, testset = train_test_split(data, test_size=.20)
+    reader = Reader(rating_scale=(1, 5))
+    lsLearning =[0.001, 0.005,0.002]
+    #data = Dataset.load_from_df(train[['userId', 'movieId', 'rating']], reader)
+    #datas = data.build_full_trainset()
+    #test =  Dataset.load_from_df(test[['userId', 'movieId', 'rating']], reader)
+    #tests= test.build_full_trainset()
+    rmseLearning =[]
+    rmseRegular =[]
+    for item in lsLearning:
+        algo = SVD(verbose=True, lr_all= item, n_epochs = 5)
+        algo.fit(trainset)
+        predictions = algo.test(testset)
+        rmseLearning.append((item, accuracy.rmse(predictions, verbose=True)))
+    lsRegular =[0.02, 0.01, 0.02 ]
+    for item in lsRegular:
+        algo = SVD(verbose=True, reg_all= item)
+        algo.fit(trainset)
+        predictions = algo.test(testset)
+        rmseRegular.append((item, accuracy.rmse(predictions, verbose=True)))
+    return rmseLearning , rmseRegular
+    
+l, r = tuning(data)
+l
+r
+ls.best_estimator['rmse']
+l 
+r
+dic={'split0_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97]
+'split1_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97], 
+'param_n_epochs':   [10, 10, 10, 10, 20, 20, 20, 20]
+'param_lr_all':     [0.0, 0.0, 0.01, 0.01, 0.0, 0.0, 0.01, 0.01]
+'param_reg_all':    [0.4, 0.6, 0.4, 0.6, 0.4, 0.6, 0.4, 0.6]}
+dic={'split0_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97]
+'split1_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97], 
+'param_n_epochs':   [10, 10, 10, 10, 20, 20, 20, 20],
+'param_lr_all':     [0.0, 0.0, 0.01, 0.01, 0.0, 0.0, 0.01, 0.01],
+'param_reg_all':    [0.4, 0.6, 0.4, 0.6, 0.4, 0.6, 0.4, 0.6]}
+dic={'split0_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97],
+'split1_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97], 
+'param_n_epochs':   [10, 10, 10, 10, 20, 20, 20, 20],
+'param_lr_all':     [0.0, 0.0, 0.01, 0.01, 0.0, 0.0, 0.01, 0.01],
+'param_reg_all':    [0.4, 0.6, 0.4, 0.6, 0.4, 0.6, 0.4, 0.6]}
+ana = pd.DataFrame([dic['split0_test_rmse'], dic['param_n_epochs'], dic['param_lr_all'], dic['param_reg_all']])
+scatter_matrix(ana)
+sns.scatter_matrix(ana)
+from pandas.tools.plotting import scatter_matrix
+scatter_matrix(ana)
+pd.plotting.scatter_matrix(ana, alpha=0.5)
+pd.plotting.scatter_matrix(ana[['split0_test_rmse','param_n_epochs','param_lr_all','param_reg_all']], alpha=0.5)
+pd.plotting.scatter_matrix(ana['split0_test_rmse','param_n_epochs','param_lr_all','param_reg_all'], alpha=0.5)
+ana['split0_test_rmse']=ana['target']
+pd.plotting.scatter_matrix(ana, alpha=0.5, figsize=(1,4))
+pd.plotting.scatter_matrix(ana['split0_test_rmse'], alpha=0.5)
+ana[0]
+pd.plotting.scatter_matrix(ana[0,1], alpha=0.5, figsize=(1,4))
+ana[[0,1]]
+pd.plotting.scatter_matrix(ana[[0,1]], alpha=0.5)
+plt.scatter(ana[0], ana[1])
+ana[0]
+ana[1]
+ana
+makearr = []
+for i in dic.items()
+pd.DataFrame.from_dict(dic)
+ana=pd.DataFrame.from_dict(dic)
+pd.plotting.scatter_matrix(ana, alpha=0.5)
+plt.scatter(ana['split0_test_rmse'], ana['param_lr_all'])
+plt.scatter(ana['param_lr_all'], ana['split0_test_rmse'])
+
+for ind, i in enumerate(dict['param_n_epochs']):
+    plt.plot(ana['param_lr_all'], ana['split0_test_rmse'], label='C: ' + str(i))
+plt.legend()
+plt.xlabel('learning rate')
+plt.ylabel('RMSE')
+plt.show()
+
+for ind, i in enumerate(list(dict['param_n_epochs'])):
+    plt.plot(ana['param_lr_all'], ana['split0_test_rmse'], label='C: ' + str(i))
+plt.legend()
+plt.xlabel('learning rate')
+plt.ylabel('RMSE')
+plt.show()
+scores = [x for x in list(dic['split0_test_rmse'])]
+scores = np.array(scores).reshape(len(8), len(8))
+scores = [x for x in list(dic['split0_test_rmse'])]
+scores = np.array(scores).reshape(8, 8)
+fig, ax = plt.subplots(1, 1)
+    sns.pointplot(x='param_lr_all', y=metric, hue='split0_test_rmse', data=cv_results, ci=99, n_boot=64, ax=ax)
+    ax.set_title("CV Grid Search Results")
+    ax.set_xlabel('param_lr_all')
+    ax.set_ylabel(metric)
+g = sns.catplot(x="param_lr_all", y="split0_test_rmse", hue="param_reg_all", col="param_n_epochs",  
+                capsize=.6, palette="YlGnBu_d", height=6, aspect=.75,  
+                kind="point", data=ana)  
+g.despine(left=True)
+g = sns.catplot(x="param_lr_all", y="split0_test_rmse", hue="param_reg_all", col="param_n_epochs",  
+                palette="YlGnBu_d", height=6, aspect=.75,  
+                kind="point", data=ana)  
+g.despine(left=True)
+g = sns.catplot(x="param_lr_all", y="split0_test_rmse", hue="param_reg_all", col="param_n_epochs",  
+                palette="YlGnBu_d",  
+                kind="point", data=ana)  
+g.despine(left=True)
+g = sns.PairGrid(ana, y_vars="split0_test_rmse",  
+                 x_vars=["param_lr_all", "param_reg_all", "param_n_epochs"],  
+                 )
+g.map(sns.pointplot, scale=1.3, errwidth=4, color="xkcd:plum")  
+g.set(ylim=(0, 1))  
+sns.despine(fig=g.fig, left=True)
+g.map(sns.pointplot, scale=1.3, errwidth=4, color="xkcd:plum")  
+
+g.set(ylim=(0, 1))  
+sns.despine(fig=g.fig, left=True)
+titanic = sns.build_datset(ana)
+titanic = sns.load_datset(ana)
+titanic = sns.load_dataset(ana)
+g = sns.PairGrid(ana, y_vars="split0_test_rmse",  
+                 x_vars=["param_lr_all", "param_reg_all", "param_n_epochs"],  
+                 )
+g = sns.PairGrid(data=ana, y_vars="split0_test_rmse",  
+                 x_vars=["param_lr_all", "param_reg_all", "param_n_epochs"],  
+                 )
+titanic
+titanic = sns.load_dataset(ana)
+titanic
+ana.to_csv("titanic")
+titanic = sns.load_dataset("titanic")
+g = sns.PairGrid(titanic, y_vars="split0_test_rmse",  
+                 x_vars=["param_lr_all", "param_reg_all", "param_n_epochs"],  
+                 )
+titanic
+ana.to_csv("csv")
+titanic = sns.load_dataset("csv")
+ye = sns.load_dataset("csv")
+ana
+ye = sns.load_dataset("csv.csv")
+ye = sns.load_dataset("C://Users//Gordana//ML_Movie_RS//csv.csv")
+g = sns.PairGrid(data=ana, y_vars="split0_test_rmse",  
+                 x_vars=["param_lr_all", "param_reg_all", "param_n_epochs"]  
+                 )
+sns.PairGrid(data=ana, y_vars="split0_test_rmse",  
+                 x_vars=["param_lr_all", "param_reg_all", "param_n_epochs"]  
+                 )
+sns.pointplot(x="param_lr_all", y="split0_test_rmse",   
+              data=ana,   
+              markers="d", scale=.75, ci=None)
+ana['param_lr_all'] = l
+len(l)
+ana['param_lr_all'] = l+l+[0.005,0.005]
+sns.pointplot(x="param_lr_all", y="split0_test_rmse",   
+              data=ana,   
+              markers="d", scale=.75, ci=None)
+ana['param_lr_all']
+dic={'split0_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97],
+'split1_test_rmse': [1.0, 1.0, 0.97, 0.98, 0.98, 0.99, 0.96, 0.97], 
+'param_n_epochs':   [35, 30, 25, 20, 15, 10, 20, 20],
+'param_lr_all':     [0.0, 0.5, 0.2, 0.08, 0.005, 0.002, 0.001, 0.001],
+'param_reg_all':    [0.7, 0.5, 0.4, 0.6, 0.4, 0.03, 0.01, 0.02]}
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+l, r = tuning(data)
+data
+l, r = tuning(data)
+def  tuning (data):
+    trainset, testset = train_test_split(data, test_size=.20)
+    reader = Reader(rating_scale=(1, 5))
+    lsLearning  =[0.0, 0.5, 0.2, 0.08, 0.005, 0.002, 0.001, 0.001]
+    #data = Dataset.load_from_df(train[['userId', 'movieId', 'rating']], reader)
+    #datas = data.build_full_trainset()
+    #test =  Dataset.load_from_df(test[['userId', 'movieId', 'rating']], reader)
+    #tests= test.build_full_trainset()
+    rmseLearning =[]
+    rmseRegular =[]
+    for item in lsLearning:
+        algo = SVD(verbose=True, lr_all= item, n_epochs = 5)
+        algo.fit(trainset)
+        predictions = algo.test(testset)
+        rmseLearning.append((item, accuracy.rmse(predictions, verbose=True)))
+    lsRegular =[0.7, 0.5, 0.4, 0.6, 0.4, 0.03, 0.01, 0.02]
+    for item in lsRegular:
+        algo = SVD(verbose=True, reg_all= item,  n_epochs = 5)
+        algo.fit(trainset)
+        predictions = algo.test(testset)
+        rmseRegular.append((item, accuracy.rmse(predictions, verbose=True)))
+    return rmseLearning , rmseRegular
+    
+l, r = tuning(data)
+l
+r
+lnew = list(map(lambda x: x[1] , l ))
+lnew
+rnew = list(map(lambda x: x[1] , r ))
+rnew
+dic
+dic['param_lr_all']= lnew
+dic['param_reg_all']= rnew
+dic['lr_rmse']= list(map(lambda x: x[0], l))
+dic['reg_rmse']= list(map(lambda x: x[0], r))
+ana=pd.DataFrame.from_dict(dic)
+sns.pointplot(x="param_lr_all", y="lr_rmse",   
+              data=ana,   
+              markers="d", scale=.75, ci=None)
+sns.pointplot(x="lr_rmse", y="param_lr_all",   
+              data=ana,   
+              markers="d", scale=.75, ci=None)
+f, ax = plt.subplots()
+sns.pointplot(x="lr_rmse", y="param_lr_all",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Learning rate")
+figure = f.get_figure()    
+figure.savefig('stat_cf.png', dpi=400)
+figure = svm.get_figure()    
+figure.savefig('svm_conf.png', dpi=400)
+sns.pointplot(x="lr_rmse", y="param_lr_all",   
+              data=ana,   
+              markers="d",  ci=None)
+f, ax = plt.subplots()
+sns.pointplot(x="lr_rmse", y="param_lr_all",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Learning rate")
+f.savefig('statq.png', dpi=400)
+f, ax = plt.subplots()
+sns.pointplot(x="reg_rmse", y="param_reg_all",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Regularization")
+f.savefig('statq2.png', dpi=400)
+f, ax = plt.subplots()
+sns.pointplot(x="lr_rmse", y="param_n_epochs",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Regularization")
+f.savefig('statq3.png', dpi=400)
+f, ax = plt.subplots()
+sns.pointplot(x="param_reg_all", y="param_n_epochs",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Regularization")
+f.savefig('statq2.png', dpi=400)
+f, ax = plt.subplots()
+sns.pointplot(x="param_n_epochs", y="param_reg_all",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Regularization")
+f.savefig('statq2.png', dpi=400)
+f, ax = plt.subplots()
+sns.pointplot(x="param_n_epochs", y="param_reg_all",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("No of epochs")
+f.savefig('statq3.png', dpi=400)
+f, ax = plt.subplots()
+sns.pointplot(x="reg_rmse", y="param_reg_all",   
+              data=ana,   
+              markers="d",  ci=None)
+ax.set_ylabel("RMSE")
+ax.set_xlabel("Regularization")
+f.savefig('statq2.png', dpi=400)
+model
+pred, alg= svd_my(model)
+pred
+type(pred)
+len(pred)
+check_system(9, 10, model, movies['data'], alg)
+s =check_system(9, 10, model, movies['data'], alg)
+type(s)
+df.hist(column='rating')
+df.hist(column='est')
+s =check_system(9, 10, model, movies['data'], alg)
+s.hist(column='est')
+s.hist(column='rating')
+s =predicted_top_n(9, 10, model, movies['data'], alg)
+s
+s =check_system(11838, None, model, movies['data'], alg)
+s
+s.hist(column='rating')
+s.hist(column='est')
+s.describe()
+model
+df =model[['movieId', 'userId', 'rating']]
+df
+df['movieId'].unique
+lsDF =[]
+for item in df['movieId'].unique:
+    s = check_system(item, 10, model, movies['data'], alg)
+    lsDF.append(s)
+lsDF =[]
+for item in df['movieId']:
+    s = check_system(item, 10, model, movies['data'], alg)
+    lsDF.append(s)
+    
+s
+result = pd.concat([s,s,s,s,s,s])
+result.hist(column='rating')
+result.hist(column='est')
+df['movieId']
+newdf=df['movieId'].head(1000)
+lsDF =[]
+for item in newdf:
+    s = check_system(item, 10, model, movies['data'], alg)
+    lsDF.append(s)
+    
+lsDF
+result = pd.concat(lsDF)
+result.hist(column='est')
+result.hist(column='rating')
+newdf, testdf=train_test_split(df['movieId'], test_size = .6)
+newdf, testdf=train_test_split(df, test_size = .6)
+df
+newdf, testdf=train_test_split(df, test_size = .6)
+newdf, testdf=train_test_split(model, test_size = .6)
+newdf, testdf=train_test_split(movie['userItem'], test_size = .6)
+newdf, testdf=train_test_split(movies['userItem'], test_size = .6)
+newdf, testdf=train_test_split(movies['itemUser'], test_size = .6)
+from sklearn.model_selection import train_test_split
+newdf, testdf=train_test_split(movies['itemUser'], test_size = .6)
+newdf, testdf=train_test_split(df, test_size = .6)
+newdf.describe
+lsDF =[]
+for item in newdf['movieId']:
+    s = check_system(item, 10, newdf, movies['data'], alg)
+    lsDF.append(s)
+    
+result = pd.concat(lsDF)
+bins = np.linspace(-10, 10, 30)
+plt.hist([result['est'], result['rating']], bins, label=['Predicted value', 'Imputed value'])
+plt.legend(loc='upper right')
+plt.show()
+plt.hist([result['est'], result['rating']], label=['Predicted value', 'Imputed value'])
+plt.legend(loc='upper right')
+plt.show()
+plt.asavefig('svd_final')
+boxplot(result['est'])
+sns.boxplot(result['est'])
+
+f, ax = plt.subplots()
+sns.boxplot(result['est'])
+f, ax = plt.subplots()
+sns.boxplot(result['est'] )
+ax.set_ylabel("")
+ax.set_xlabel("")
+f.savefig('svd_boxplot_est.png', dpi=400)
+f, ax = plt.subplots()
+sns.boxplot(result['rating'] )
+ax.set_ylabel("")
+ax.set_xlabel("")
+f.savefig('svd_boxplot_est.png', dpi=400)
+f, ax = plt.subplots()
+sns.boxplot(result['rating'] )
+ax.set_ylabel("")
+ax.set_xlabel("")
+f.savefig('svd_boxplot_actual.png', dpi=400)
+f, ax = plt.subplots()
+sns.boxplot(result['est'] )
+ax.set_ylabel("")
+ax.set_xlabel("")
+f.savefig('svd_boxplot_est.png', dpi=400)
+summary(result['est'])
+result['est'].describe()
+result['rating'].describe()
+tf = TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0, stop_words='english')
+tfidf_matrix = tf.fit_transform(list(movies['data'][['tagline_mod', 'weighted_rating', 'genres_mod', 'production_countries']]))
+tfidf_matrix.shape
+cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+cosine_sim[:4, :4]
+sim_scores = list(enumerate(cosine_sim[idx]))
+max(movies['data']['weighted_rating'])
+movies['data'][movies['data']['weighted_rating'] =max(movies['data']['weighted_rating'])]
+movies['data'][movies['data']['weighted_rating'] ==max(movies['data']['weighted_rating'])]
+top =movies['data'][movies['data']['weighted_rating'] ==max(movies['data']['weighted_rating'])]
+top['id']
+sim_scores = list(enumerate(cosine_sim[19404]))
+top
+movies['data']
+tf =list(movies['data'][['tagline_mod', 'weighted_rating', 'genres_mod', 'production_countries']])
+tf =list(movies['data']['tagline_mod', 'weighted_rating', 'genres_mod', 'production_countries'])
+tf =list(movies['data']['tagline_mod'])
+tf
+movies['data']['bag_of_words'] = movies['data']['tagline_mod'].map(str) + movies['data']['genres_mod'].map(str) +movies['data']['production_countries'].map(str)
+movies['data']['bag_of_words']
+movies['data']['bag_of_words'].iloc[0]
+     tf = TfidfVectorizer(analyzer='word',ngram_range=(1, 2),min_df=0, stop_words='english')
+
+     tfidf_matrix = tf.fit_transform(list(movies['data']['bag_of_words']))
+tfidf_matrix.shape
+sim_scores = list(enumerate(cosine_sim[19404]))
+cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+tfidf_matrix
+tfidf_matrix.shape
+tfidf_matrix = tf.fit_transform(list(movies['data']['genre_mod']))
+tfidf_matrix = tf.fit_transform(list(movies['data']['genres_mod']))
+tfidf_matrix.shape
+cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+tfidf_matrix.shape
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+tfidf_matrix = tf.fit_transform(list(movies['data']['genres_mod']))
+cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+tfidf_matrix.shape
+from sklearn.metrics.pairwise import linear_kernel
+cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+from sklearn.feature_extraction.text import CountVectorizer
+
+count = CountVectorizer(stop_words='english')
+count_matrix = count.fit_transform(metadata['soup'])
+from sklearn.feature_extraction.text import CountVectorizer
+
+count = CountVectorizer(stop_words='english')
+count_matrix = count.fit_transform(movies['data']['bag_of_words'])
+from sklearn.metrics.pairwise import cosine_similarity
+
+cosine_sim2 = cosine_similarity(count_matrix, count_matrix)
+count_matrix.shape
+model_doc2 = doc2VecImplementation(movies['data'])
+model_doc2.shape
+model_doc2
+model_doc2.docvecs.most_similar('Star War')
+model_doc2.docvecs.most_similar(positive ='Star War')
+    #base_dir = join(dirname(__file__), 'data/')
+    base_dir ='C:\\Users\\Gordana\\ML_Movie_RS\\the-movies-dataset\\'
+    rating_file = 'ratings.csv'
+    movie_file = 'movies_metadata.csv'
+
+    #Read the titles
+    df_movies = pd.read_csv(base_dir + movie_file)
+df_movies.iloc[7]
+df_movies.iloc[9]
+inferred_vector = model.infer_vector(df_movies.iloc[9]['overview'])
+inferred_vector = model_doc2.infer_vector(df_movies.iloc[9]['overview'])
+inferred_vector = model_doc2.infer_vector(df_movies.iloc[9]['overview'].split())
+sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+rank = [docid for docid, sim in sims].index(doc_id)
+rank = [docid for docid, sim in sims].index(9)
+rank = [docid for docid, sim in sims].index(0)
+sims
+movies.shape
+movies['data'].shape
+df_movies.shape
+movies['data'][movies['data']['id'].isin([36870,13820, 28641])]
+movies['data'][movies['data']['id'] ==36870]
+movies['data'][movies['data']['id'] ==13820]
+l=movies['data'][movies['data']['id'] ==13820]
+l['title']
+l['weighted_rating']
+int('13344')
+lsMov = [ int(i[0]) for i in sims] 
+lsMov
+movies['data'][movies['data']['id'].isin(lsMov)]['title']
+df_movies[df_movies['id'] = 36870]
+df_movies[df_movies['id'] == 36870]
+for i , s in df_movies.head()
+for i , s in df_movies.head(5):
+    print(i)
+    
+for m in df_movies.head(5):
+    print(m)
+    
+for m in df_movies.head(5)[1:]:
+    print(m)
+    
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+sims
+lsMov = [ int(i[0]) for i in sims]
+movies['data'][movies['data']['id'].isin(lsMov)]
+movies['data'][movies['data']['id'].isin(lsMov)]['title']
+df_movies.iloc[9]['title']
+movies['data'].head(1)
+movies['data'].head(1)['overview')
+movies['data'].head(1)['overview']
+movies['data'].head(1)[['overview'],['title']]
+movies['data'].head(1)[['overview','title']]
+movies['data'].head(6)[['overview','title']]
+movies['data'].iloc[7265][['overview','title']]
+movies['data'].iloc[7269][['overview','title']]
+movies['data'][movies['data']['weighted_rating']==8]
+movies['data'][movies['data']['weighted_rating']== 4.5]
+find_user = movies['itemUser'].copy()
+find_user['count'] = 1
+find_user = find_user.groupby('userId').sum()
+find_user
+movies['data'][movies['data']['id']==8044581]
+movies['data'][movies['data']['id']==171978]
+movies['data'][movies['data']['id']==26960]
+movies['data'][movies['data']['id']==26960]['title']
+inferred_vector = model_doc2.infer_vector(movies['data'][movies['data']['id']==26960]['overview'].split())
+string =movies['data'][movies['data']['id']==26960]['title']
+string
+string =movies['data'][movies['data']['id']==26960]['overview']
+type(string)
+string.to_str()
+vec=string.to_string()
+inferred_vector = model_doc2.infer_vector(vec.split())
+sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+sims
+neMov=movies['itemUser'][['userId','movieId','rating']]
+neMov
+find_user['count'] = 1
+find_user = find_user.groupby('userId').sum()
+find_user
+neMov.groupby('userId')
+neMov.groupby('userId').average()
+neMov.groupby('userId')['rating'].mean()
+userFeatures = neMov.groupby('userId')['rating'].mean()
+neMov
+lsSum = sum(list(map(lambda x: x[1], sims)))
+lsSum
+userFeatures = neMov.groupby('userId')['rating'].mean()
+userFeatures
+userFeatures.head(1).index
+userFeatures.head(1)
+userFeatures.head(1).index
+userFeatures.iloc[9].index
+userFeatures.iloc[9]
+neMov
+neMov['userId']
+new =neMov['userId'].unique
+new
+new =neMov.groupby('userId')['userId']
+new
+new.iloc[3]
+userFeatures
+userFeatures.index
+userFeatures.index[0]
+userFeatures.index[50,100]
+userFeatures.index[50 :100]
+pd.DataFrame([[1,2,3], [1,1,1], [2.4,3.45,5.6], [3.6,2.4,5.6]])
+pd.DataFrame([[1,1,3.4, 2.5], [2,1,4..6, 5.8], [3,1,3.45,5.6], [4, 1,2.4,5.6]])
+test=pd.DataFrame([[1,1,3.4, 2.5], [2,1,4.6, 5.8], [3,1,3.45,5.6], [4, 1,2.4,5.6]])
+hist(test, [2,3])
+test.hist(2)
+test.hist(2,3)
+test.hist([2,3])
+dic={'e':[]}
+dic['e'].append(5)
+dic
+user_rating = neMov
+user_rating[user_rating['userId']==1 and user_rating['movieId']==110]['rating']
+user_rating[(user_rating['userId']==1) & (user_rating['movieId']==110)]['rating']
+user_rating[(user_rating['userId']==1) & (user_rating['movieId']==110)]['rating'].head(1)
+lsMovieRat = [ int(movies['data'][movies['data']['id']==int(i[0])]['weighted_rating']) for i in sims ]
+lsMovieRat = [ movies['data'][movies['data']['id']==int(i[0]]['weighted_rating']) for i in sims ]
+lsMovieRat = [ movies['data'][movies['data']['id']==int(i[0])]['weighted_rating'] for i in sims ]
+cros_pro= sum([sims[i][1]*lsMovieRat[i] for i in range(len(sims))])
+cros_PRO
+cros_pro
+def CheckDoc2Vec ( model_doc2, movies, user_rating):
+    # Takes a subsample of the user's ratings
+    userFeatures = user_rating.groupby('userId')['rating'].mean()
+    userId = userFeatures.index
+    data ={'userId' :[] , 'movieId':[], 'rating':[], 'est':[], 'error':[]}
+    for userRat in userId[50:60]:
+        movieId = user_rating[user_rating['userId']==userRat].head(1)['moveId']
+        data['userId'].append(userRat)
+        data['movieId'].append(movieId)
+        pdOver= movies[movies['id']==movieId]['overview']
+        inferred_vector = model_doc2.infer_vector(pdOver.to_string().split())
+        sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+        iSum = sum(list(map(lambda x: x[1], sims)))
+        lsMovieRat = [ float(movies[movies['id']==int(i[0])]['weighted_rating']) for i in sims ]
+        cros_pro= sum([sims[i][1]*lsMovieRat[i] for i in range(len(sims)) ])
+        rui= userFeatures.iloc[userRat] + (cros_pro/iSum)
+        data['rating'].append(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId']==movieId)]['rating'])
+        data['est'].append(rui)
+        data['error'] = rui-data['rating'][-1]
+    return pd.DataFrame.from_dict(data)
+    
+CheckDoc2Vec(model_doc2, df_movies,movies['userItem'])
+CheckDoc2Vec(model_doc2, df_movies,movies['itemUser'])
+def CheckDoc2Vec ( model_doc2, movies, user_rating):
+    # Takes a subsample of the user's ratings
+    userFeatures = user_rating.groupby('userId')['rating'].mean()
+    userId = userFeatures.index
+    data ={'userId' :[] , 'movieId':[], 'rating':[], 'est':[], 'error':[]}
+    for userRat in userId[50:60]:
+        movieId = user_rating[user_rating['userId']==userRat].head(1)['movieId']
+        data['userId'].append(userRat)
+        data['movieId'].append(movieId)
+        pdOver= movies[movies['id']==movieId]['overview']
+        inferred_vector = model_doc2.infer_vector(pdOver.to_string().split())
+        sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+        iSum = sum(list(map(lambda x: x[1], sims)))
+        lsMovieRat = [ float(movies[movies['id']==int(i[0])]['weighted_rating']) for i in sims ]
+        cros_pro= sum([sims[i][1]*lsMovieRat[i] for i in range(len(sims)) ])
+        rui= userFeatures.iloc[userRat] + (cros_pro/iSum)
+        data['rating'].append(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId']==movieId)]['rating'])
+        data['est'].append(rui)
+        data['error'] = rui-data['rating'][-1]
+    return pd.DataFrame.from_dict(data)
+    
+CheckDoc2Vec(model_doc2, df_movies,movies['itemUser'])
+pdOver= movies[movies['id']==110]['overview']
+movieId = int(user_rating[user_rating['userId']==1].head(1)['movieId'])
+movieId
+pdOver= movies[movies['id']==110]['overview']
+movies= df_movies
+pdOver= movies[movies['id']==110]['overview']
+pdOver
+pdOver.to_string()
+def CheckDoc2Vec ( model_doc2, movies, user_rating):
+    # Takes a subsample of the user's ratings
+    userFeatures = user_rating.groupby('userId')['rating'].mean()
+    userId = userFeatures.index
+    data ={'userId' :[] , 'movieId':[], 'rating':[], 'est':[], 'error':[]}
+    for userRat in userId[50:60]:
+        movieId = int(user_rating[user_rating['userId']==userRat].head(1)['movieId'])
+        data['userId'].append(userRat)
+        data['movieId'].append(movieId)
+        pdOver= movies[movies['id']==movieId]['overview']
+        inferred_vector = model_doc2.infer_vector(pdOver.to_string().split()[1:])
+        sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+        iSum = sum(list(map(lambda x: x[1], sims)))
+        lsMovieRat = [ float(movies[movies['id']==int(i[0])]['weighted_rating']) for i in sims ]
+        cros_pro= sum([sims[i][1]*lsMovieRat[i] for i in range(len(sims)) ])
+        rui= userFeatures.iloc[userRat] + (cros_pro/iSum)
+        data['rating'].append(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId']==movieId)]['rating'])
+        data['est'].append(rui)
+        data['error'] = rui-data['rating'][-1]
+    return pd.DataFrame.from_dict(data)
+    
+CheckDoc2Vec(model_doc2, df_movies,movies['itemUser'])
+movies['itemUser']
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+CheckDoc2Vec(model_doc2, df_movies,movies['itemUser'])
+def CheckDoc2Vec ( model_doc2, movies, user_rating):
+    # Takes a subsample of the user's ratings
+    userFeatures = user_rating.groupby('userId')['rating'].mean()
+    userId = userFeatures.index
+    data ={'userId' :[] , 'movieId':[], 'rating':[], 'est':[], 'error':[]}
+    for userRat in userId[50:60]:
+        movieId = int(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId'].isin(movies['id']))].head(1)['movieId'])
+        data['userId'].append(userRat)
+        data['movieId'].append(movieId)
+        pdOver= movies[movies['id']==movieId]['overview']
+        inferred_vector = model_doc2.infer_vector(pdOver.to_string().split()[1:])
+        sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+        iSum = sum(list(map(lambda x: x[1], sims)))
+        lsMovieRat = [ float(movies[movies['id']==int(i[0])]['weighted_rating']) for i in sims ]
+        cros_pro= sum([sims[i][1]*lsMovieRat[i] for i in range(len(sims)) ])
+        rui= userFeatures.iloc[userRat] + (cros_pro/iSum)
+        data['rating'].append(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId']==movieId)]['rating'])
+        data['est'].append(rui)
+        data['error'] = rui-data['rating'][-1]
+    return pd.DataFrame.from_dict(data)
+    
+CheckDoc2Vec(model_doc2, movies['data'],movies['itemUser'])
+def CheckDoc2Vec ( model_doc2, movies, user_rating):
+    # Takes a subsample of the user's ratings
+    userFeatures = user_rating.groupby('userId')['rating'].mean()
+    userId = userFeatures.index
+    data ={'userId' :[] , 'movieId':[], 'rating':[], 'est':[], 'error':[]}
+    for userRat in userId[50:60]:
+        movieId = int(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId'].isin(movies['id']))].head(1)['movieId'])
+        data['userId'].append(userRat)
+        data['movieId'].append(movieId)
+        pdOver= movies[movies['id']==movieId]['overview']
+        inferred_vector = model_doc2.infer_vector(pdOver.to_string().split()[1:])
+        sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+        iSum = sum(list(map(lambda x: x[1], sims)))
+        lsMovieRat = [ float(movies[movies['id']==int(i[0])]['weighted_rating']) for i in sims ]
+        cros_pro= sum([sims[i][1]*lsMovieRat[i] for i in range(len(sims)) ])
+        rui= userFeatures.iloc[userRat] + (cros_pro/iSum)
+        data['rating'].append(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId']==movieId)]['rating'])
+        data['est'].append(rui)
+        data['error'].append(rui-data['rating'][-1])
+    return pd.DataFrame.from_dict(data)
+    
+doc_res=CheckDoc2Vec(model_doc2, movies['data'],movies['itemUser'])
+doc_res
+doc_res.hist(columns=['est', 'rating'])
+doc_res.hist(columns='est')
+doc_res.hist(columns='rating')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+2.899/2
+2.899/2.0
+runfile('C:/Users/Gordana/ML_Movie_RS/data.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+data_res=CheckDoc2Vec(model_doc2, movies['data'],movies['itemUser'])
+movieId = int(user_rating[(user_rating['userId']==7) & (user_rating['movieId'].isin(movies['data']['id']))].head(0)['movieId'])
+movieId = user_rating[(user_rating['userId']==7) & (user_rating['movieId'].isin(movies['data']['id']))].head(0)
+movieId
+movieId = user_rating[(user_rating['userId']==7) & (user_rating['movieId'].isin(movies['data']['id']))].head(0)['rating']
+movieId
+movieId = user_rating[(user_rating['userId']==7) & (user_rating['movieId'].isin(movies['data']['id']))].head(0)['rating'].astype(int)
+movieId
+movieId = user_rating[(user_rating['userId']==7) & (user_rating['movieId'].isin(movies['data']['id']))].head(0)['rating'].astype(int)[-1]
+movieId = user_rating[(user_rating['userId']==1) & (user_rating['movieId'].isin(movies['data']['id']))].head(0)['rating'].astype(int)
+movieId
+user_rating= movies['itemUser']
+movieId = user_rating[(user_rating['userId']==1) & (user_rating['movieId'].isin(movies['data']['id']))].head(0)['rating'].astype(int)
+movieId
+movieId = user_rating[user_rating['movieId'].isin(movies['data']['id'])].head(0)
+movieId
+movies['data']['id'].astype(int)
+movies['data']['id'].astype(list)
+type(movies['data']['id'])
+movieId = user_rating[user_rating['movieId'].isin(movies['data']['id'].tolist())].head(0)
+movieId
+ls= movies['data']['id'].tolist()
+ls
+movieId = user_rating[user_rating['movieId'].isin(ls)].head(6)
+movieId
+def CheckDoc2Vec ( model_doc2, movies, user_rating):
+    # Takes a subsample of the user's ratings
+    userFeatures = user_rating.groupby('userId')['rating'].mean()
+    userId = userFeatures.index
+    data ={'userId' :[] , 'movieId':[], 'rating':[], 'est':[], 'error':[]}
+    for userRat in userId[50:500]:
+        lsId =movies['id'].tolist()
+        movieId = int(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId'].isin(lsId))].head(1)['movieId'])
+        data['userId'].append(userRat)
+        data['movieId'].append(movieId)
+        pdOver= movies[movies['id']==movieId]['overview']
+        inferred_vector = model_doc2.infer_vector(pdOver.to_string().split()[1:])
+        sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+        iSum = sum(list(map(lambda x: x[1], sims)))
+        lsMovieRat = [ float(movies[movies['id']==int(i[0])]['weighted_rating']) for i in sims ]
+        cros_pro= sum([sims[i][1]*lsMovieRat[i] for i in range(len(sims)) ])
+        rui= userFeatures.iloc[userRat] + (cros_pro/iSum)
+        data['rating'].append(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId']==movieId)]['rating'])
+        data['est'].append(rui)
+        data['error'].append(rui-data['rating'][-1])
+    return pd.DataFrame.from_dict(data)
+    
+data_res=CheckDoc2Vec(model_doc2, movies['data'],movies['itemUser'])
+movieId
+movieId.head(1)
+movieId.head(0)
+movieId.head(0)['movieId']
+movieId.head(1)['movieId']
+int(movieId.head(1)['movieId'])
+int(64838383)
+int(6483838344444)
+def CheckDoc2Vec ( model_doc2, movies, user_rating):
+    # Takes a subsample of the user's ratings
+    userFeatures = user_rating.groupby('userId')['rating'].mean()
+    userId = userFeatures.index
+    data ={'userId' :[] , 'movieId':[], 'rating':[], 'est':[], 'error':[]}
+    for userRat in userId[50:500]:
+        lsId =movies['id'].tolist()
+        print(lsId)
+        movieId = int(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId'].isin(lsId))].head(1)['movieId'])
+        data['userId'].append(userRat)
+        data['movieId'].append(movieId)
+        pdOver= movies[movies['id']==movieId]['overview']
+        inferred_vector = model_doc2.infer_vector(pdOver.to_string().split()[1:])
+        sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+        iSum = sum(list(map(lambda x: x[1], sims)))
+        lsMovieRat = [ float(movies[movies['id']==int(i[0])]['weighted_rating']) for i in sims ]
+        cros_pro= sum([sims[i][1]*lsMovieRat[i] for i in range(len(sims)) ])
+        rui= userFeatures.iloc[userRat] + (cros_pro/iSum)
+        data['rating'].append(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId']==movieId)]['rating'])
+        data['est'].append(rui)
+        data['error'].append(rui-data['rating'][-1])
+    return pd.DataFrame.from_dict(data)
+    
+data_res=CheckDoc2Vec(model_doc2, movies['data'],movies['itemUser'])
+def CheckDoc2Vec ( model_doc2, movies, user_rating):
+    # Takes a subsample of the user's ratings
+    userFeatures = user_rating.groupby('userId')['rating'].mean()
+    userId = userFeatures.index
+    data ={'userId' :[] , 'movieId':[], 'rating':[], 'est':[], 'error':[]}
+    for userRat in userId[50:100]:
+        lsId =movies['id'].tolist()
+        #print(lsId)
+        movieId = int(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId'].isin(lsId))].head(1)['movieId'])
+        data['userId'].append(userRat)
+        data['movieId'].append(movieId)
+        pdOver= movies[movies['id']==movieId]['overview']
+        inferred_vector = model_doc2.infer_vector(pdOver.to_string().split()[1:])
+        sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+        iSum = sum(list(map(lambda x: x[1], sims)))
+        lsMovieRat = [ float(movies[movies['id']==int(i[0])]['weighted_rating']) for i in sims ]
+        cros_pro= sum([sims[i][1]*lsMovieRat[i] for i in range(len(sims)) ])
+        rui= userFeatures.iloc[userRat] + (cros_pro/iSum)
+        data['rating'].append(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId']==movieId)]['rating'])
+        data['est'].append(rui)
+        data['error'].append(rui-data['rating'][-1])
+    return pd.DataFrame.from_dict(data)
+    
+data_res=CheckDoc2Vec(model_doc2, movies['data'],movies['itemUser'])
+plt.hist(['est', 'rating'], label=['x', 'y'])
+plt.legend(loc='upper right')
+plt.show()
+import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-deep')
+plt.hist(['est', 'rating'], label=['x', 'y'])
+plt.legend(loc='upper right')
+plt.show()
+plt.hist([data_res['est'], data_res['rating']], label=['est', 'rating'])
+plt.legend(loc='upper right')
+plt.show()
+data_res
+data_res.hist('est')
+movies['data']['weighted_rating']
+movies['data']['weighted_rating'].describe
+data_res.hist('rating')
+user_rating[(user_rating['userId']==userRat) & (user_rating['movieId']==movieId)]['rating']
+user_rating[(user_rating['userId']==101) & (user_rating['movieId']==7)]['rating']
+int(user_rating[(user_rating['userId']==101) & (user_rating['movieId']==7)]['rating'])
+runfile('C:/Users/Gordana/ML_Movie_RS/main.py', wdir='C:/Users/Gordana/ML_Movie_RS')
+data_res=CheckDoc2Vec(model_doc2, movies['data'],movies['itemUser'])
+data_res
+import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-deep')
+plt.hist([data_res['est'], data_res['rating']], label=['est', 'rating'])
+plt.legend(loc='upper right')
+plt.show()
+data_res['est']=data['est'].apply(lambda x: x-3.3 if x >4.0 else x)
+data_res['est']=data_res['est'].apply(lambda x: x-3.3 if x >4.0 else x)
+import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-deep')
+plt.hist([data_res['est'], data_res['rating']], label=['est', 'rating'])
+plt.legend(loc='upper right')
+plt.show()
+def CheckDoc2Vec ( model_doc2, movies, user_rating):
+    # Takes a subsample of the user's ratings
+    userFeatures = user_rating.groupby('userId')['rating'].mean()
+    userId = userFeatures.index
+    data ={'userId' :[] , 'movieId':[], 'rating':[], 'est':[], 'error':[]}
+    for userRat in userId[50:160]:
+        lsId =movies['id'].tolist()
+        #print(lsId)
+        movieId = int(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId'].isin(lsId))].head(1)['movieId'])
+        data['userId'].append(userRat)
+        data['movieId'].append(movieId)
+        pdOver= movies[movies['id']==movieId]['overview']
+        inferred_vector = model_doc2.infer_vector(pdOver.to_string().split()[1:])
+        sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+        iSum = sum(list(map(lambda x: x[1], sims)))
+        lsMovieRat = [ float(movies[movies['id']==int(i[0])]['weighted_rating']) for i in sims ]
+        cros_pro= sum([sims[i][1]*lsMovieRat[i] for i in range(len(sims)) ])
+        rui= userFeatures.iloc[userRat] + (cros_pro/iSum)
+        data['rating'].append(float(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId']==movieId)]['rating']))
+        data['est'].append(rui)
+        data['est']=data['est'].apply(lambda x: x-3.3 if x >4.0 else x)
+        data['error'].append(rui-data['rating'][-1])
+    return pd.DataFrame.from_dict(data)
+    
+def CheckDoc2Vec ( model_doc2, movies, user_rating):
+    # Takes a subsample of the user's ratings
+    userFeatures = user_rating.groupby('userId')['rating'].mean()
+    userId = userFeatures.index
+    data ={'userId' :[] , 'movieId':[], 'rating':[], 'est':[], 'error':[]}
+    for userRat in userId[50:360]:
+        lsId =movies['id'].tolist()
+        #print(lsId)
+        movieId = int(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId'].isin(lsId))].head(1)['movieId'])
+        data['userId'].append(userRat)
+        data['movieId'].append(movieId)
+        pdOver= movies[movies['id']==movieId]['overview']
+        inferred_vector = model_doc2.infer_vector(pdOver.to_string().split()[1:])
+        sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+        iSum = sum(list(map(lambda x: x[1], sims)))
+        lsMovieRat = [ float(movies[movies['id']==int(i[0])]['weighted_rating']) for i in sims ]
+        cros_pro= sum([sims[i][1]*lsMovieRat[i] for i in range(len(sims)) ])
+        rui= userFeatures.iloc[userRat] + (cros_pro/iSum)
+        data['rating'].append(float(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId']==movieId)]['rating']))
+        data['est'].append(rui)
+        data['est']=data['est'].apply(lambda x: x-3.3 if x >4.0 else x)
+        data['error'].append(rui-data['rating'][-1])
+    return pd.DataFrame.from_dict(data)
+    
+data_res=CheckDoc2Vec(model_doc2, movies['data'],movies['itemUser'])
+def CheckDoc2Vec ( model_doc2, movies, user_rating):
+    # Takes a subsample of the user's ratings
+    userFeatures = user_rating.groupby('userId')['rating'].mean()
+    userId = userFeatures.index
+    data ={'userId' :[] , 'movieId':[], 'rating':[], 'est':[], 'error':[]}
+    for userRat in userId[50:360]:
+        lsId =movies['id'].tolist()
+        #print(lsId)
+        movieId = int(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId'].isin(lsId))].head(1)['movieId'])
+        data['userId'].append(userRat)
+        data['movieId'].append(movieId)
+        pdOver= movies[movies['id']==movieId]['overview']
+        inferred_vector = model_doc2.infer_vector(pdOver.to_string().split()[1:])
+        sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+        iSum = sum(list(map(lambda x: x[1], sims)))
+        lsMovieRat = [ float(movies[movies['id']==int(i[0])]['weighted_rating']) for i in sims ]
+        cros_pro= sum([sims[i][1]*lsMovieRat[i] for i in range(len(sims)) ])
+        rui= userFeatures.iloc[userRat] + (cros_pro/iSum)
+        data['rating'].append(float(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId']==movieId)]['rating']))
+        data['est'].append(rui)
+        data['error'].append(rui-data['rating'][-1])
+    return pd.DataFrame.from_dict(data)
+    
+data_res=CheckDoc2Vec(model_doc2, movies['data'],movies['itemUser'])
+def CheckDoc2Vec ( model_doc2, movies, user_rating):
+    # Takes a subsample of the user's ratings
+    userFeatures = user_rating.groupby('userId')['rating'].mean()
+    userId = userFeatures.index
+    data ={'userId' :[] , 'movieId':[], 'rating':[], 'est':[], 'error':[]}
+    for userRat in userId[50:260]:
+        lsId =movies['id'].tolist()
+        #print(lsId)
+        movieId = int(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId'].isin(lsId))].head(1)['movieId'])
+        data['userId'].append(userRat)
+        data['movieId'].append(movieId)
+        pdOver= movies[movies['id']==movieId]['overview']
+        inferred_vector = model_doc2.infer_vector(pdOver.to_string().split()[1:])
+        sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+        iSum = sum(list(map(lambda x: x[1], sims)))
+        lsMovieRat = [ float(movies[movies['id']==int(i[0])]['weighted_rating']) for i in sims ]
+        cros_pro= sum([sims[i][1]*lsMovieRat[i] for i in range(len(sims)) ])
+        rui= userFeatures.iloc[userRat] + (cros_pro/iSum)
+        data['rating'].append(float(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId']==movieId)]['rating']))
+        data['est'].append(rui)
+        data['error'].append(rui-data['rating'][-1])
+    return pd.DataFrame.from_dict(data)
+    
+data_res=CheckDoc2Vec(model_doc2, movies['data'],movies['itemUser'])
+data_res
+data_res['est']=data_res['est'].apply(lambda x: x-3.3 if x >4.0 else x)
+import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-deep')
+plt.hist([data_res['est'], data_res['rating']], label=['est', 'rating'])
+plt.legend(loc='upper right')
+plt.show()
+data_res['est'].describe
+data_res['est'].describe()
+data_res['rating'].describe()
+data_res
+def CheckDoc2Vec ( model_doc2, movies, user_rating):
+    # Takes a subsample of the user's ratings
+    userFeatures = user_rating.groupby('userId')['rating'].mean()
+    userId = userFeatures.index
+    data ={'userId' :[] , 'movieId':[], 'rating':[], 'est':[], 'error':[]}
+    for userRat in userId[50:260]:
+        lsId =movies['id'].tolist()
+        #print(lsId)
+        movieId = int(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId'].isin(lsId))].head(1)['movieId'])
+        data['userId'].append(userRat)
+        data['movieId'].append(movieId)
+        pdOver= movies[movies['id']==movieId]['overview']
+        inferred_vector = model_doc2.infer_vector(pdOver.to_string().split()[1:])
+        sims = model_doc2.docvecs.most_similar([inferred_vector], topn=10)
+        iSum = sum(list(map(lambda x: x[1], sims)))
+        lsMovieRat = [ float(movies[movies['id']==int(i[0])]['weighted_rating']) for i in sims ]
+        cros_pro= sum([sims[i][1]*lsMovieRat[i] for i in range(len(sims)) ])
+        rui= (cros_pro/iSum)
+        data['rating'].append(float(user_rating[(user_rating['userId']==userRat) & (user_rating['movieId']==movieId)]['rating']))
+        data['est'].append(rui)
+        data['error'].append(rui-data['rating'][-1])
+    return pd.DataFrame.from_dict(data)
+    
+data_res=CheckDoc2Vec(model_doc2, movies['data'],movies['itemUser'])
+data_res
+import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-deep')
+plt.hist([data_res['est'], data_res['rating']], label=['est', 'rating'])
+plt.legend(loc='upper right')
+plt.show()
